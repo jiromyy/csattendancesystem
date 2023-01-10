@@ -1,0 +1,270 @@
+.hug {
+/* Login */
+
+
+position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #FFFFFF;
+}
+
+.left{
+/* left */
+
+position: absolute;
+width: 720px;
+height: 1024px;
+left: 0px;
+top: 0px;
+}
+
+.right{
+/* right */
+/* Auto layout */
+
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+padding: 25px 0px;
+
+position: absolute;
+width: 720px;
+height: 1024px;
+left: 720px;
+top: 0px;
+
+background: #FFFFFF;
+}
+
+.form{
+/* form-body-login */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 13px 25px;
+gap: 25px;
+
+width: 410.5px;
+height: 682px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.inputbox{
+    box-sizing: border-box;
+
+    width: 360.5px;
+    height: 48px;
+    overflow: scroll;
+    
+    border: 1px solid #000000;
+    border-radius: 8px;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.label{
+    
+/* Input-name */
+
+
+width: 73px;
+height: 21px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+/* identical to box height */
+
+
+color: #101010;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.titletext{
+/* Event Attendance Portal */
+
+
+width: 283px;
+height: 35px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 23px;
+line-height: 34px;
+/* identical to box height */
+
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+
+.img{
+/* image 1 */
+
+
+width: 65px;
+height: 65px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.headframe{
+ /* Frame */
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 16px 0px;
+gap: 12.5px;
+
+width: 360.5px;
+height: 97px;
+
+background: #FFFFFF;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+}
+
+.formframe{/* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 7px 0px;
+    gap: 20px;
+    
+    width: 360.5px;
+    height: 172px;
+    
+    background: #FFFFFF;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;}
+
+.loginbtn{
+    /* Auto layout */
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 14px 8px 13px;
+gap: 8px;
+
+width: 360.5px;
+height: 51px;
+
+background: #117D2C;
+border-radius: 8px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+}
+
+.loginbtn .text{
+    /* Button */
+
+
+width: 44px;
+height: 24px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.imgf{
+/* image 20 */
+
+
+position: absolute;
+width: 2300px;
+height: 2035px;
+left: -790px;
+top: -436px;
+}
+
+.emptydiv{
+/* Frame */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 16px 0px;
+gap: 12.5px;
+
+width: 360.5px;
+height: 97px;
+
+background: #FFFFFF;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+}
