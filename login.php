@@ -14,7 +14,7 @@
                 <img class="imgf" src="img/mmsuadmin.jpg" alt="">
             </div>
             <div class="right">
-                <form class="form" action="">
+                <form class="form" action="POST">
                     <div class="emptydiv"></div>
                     <div class="headframe">
                         <img class="img" src="img/mmsulogo.png" alt="">
@@ -44,10 +44,10 @@
  $password = "";
  $dbname = " ";
 
- include('connectiondb.php')
+ //include('connectiondb.php')
 
 //server side validation
- if ($_SERVER["REQUEST_METHOD"] == "POST") 
+ if ($_SERVER["REQUEST_METHOD"] == "POST")
  {
  	 if (empty($_POST["username"])) 
  	 {
