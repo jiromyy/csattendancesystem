@@ -11,7 +11,7 @@
     <body>
 
         <?php  
-        include("php/auth.php")
+        //include("php/auth.php")
         ?>
 
         <!-- nav-dashboard-container start --->
@@ -54,7 +54,7 @@
                         <li>
                             <i class="fa-solid fa-arrow-right-from-bracket"></i>
                             <form action="#" method="POST">
-                                <input name="logout" type="submit" value="Log Out">
+                                <button name="logout" type="submit"><span>Logout</span></button>
                             </form>
                         </li>
                     </ul>
