@@ -11,15 +11,16 @@
 <body>
 
 <?php  
-    include("php/auth.php")
+    // include("php/auth.php")
 ?>
         <div class="hug">
             <div class="left">
                 <img class="imgf" src="assets/mmsuadmin.jpg" alt="">
             </div>
             <div class="right">
+                <div class="right-inner">
                 <form class="form" action="" method="POST">
-                    <div class="emptydiv"></div>
+                <div class="emptydiv"></div>
                     <div class="headframe">
                         <img class="img" src="assets/mmsulogo.png" alt="">
                         <h1 class="titletext">Event Attendance Portal</h1>
@@ -49,12 +50,12 @@
                       ?>
                     </div>
 
-                    <div class="empty"></div>
                     <button type="submit" name="login" class="loginbtn"><p class="text">Login<p></button>
                     <p class="forgotpass">Forgot Password?</p>
 
-                    <p class="footer">Terms of Use</p>
-                </form>
+                    
+                </form><p class="footer">Terms of Use</p>
+                </div>
             </div>
         </div>
 </body>
