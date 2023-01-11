@@ -13,7 +13,7 @@
         <!--LOGIN FORM-->
         <div class="hug">
             <div class="left">
-                <img class="imgf" src="img/mmsuadmin.jpg" alt="">
+                <img class="imgf" src="img/mmsuadmin.jpg" alt="mmsuadmin.jpg">
             </div>
             <div class="right">
                 <form class="form" action="POST">
@@ -85,7 +85,8 @@
        {
        			session_start();
        		    $row = $data->fetch_assoc();
-       		    $_SESSION["username"] = $row['psword'];
+       		    $_SESSION["username"] = $row['username'];
+                $_SESSION["password"] = $row['password'];
     
        		echo '<script type="text/javascript">
 				alert("Welcome!");
