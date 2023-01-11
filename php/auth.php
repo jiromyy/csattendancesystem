@@ -3,7 +3,7 @@ if(session_status() !== PHP_SESSION_ACTIVE){
 session_start();
 }
 
-//include("php/connectiondb.php");
+include("php/connectiondb.php");
 
 if (isset($_POST['login'])) {
 	$username = test_input($_POST['username']);
