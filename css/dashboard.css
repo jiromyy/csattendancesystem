@@ -194,13 +194,13 @@ div.nav-manage-links > ul > li > a > span {
     color: inherit;
 }
 
-div.nav-manage-links > ul > li > button {
+div.nav-manage-links > ul > li > form > input {
     color: inherit;
     border: none;
     background-color: transparent;
 }
 
-div.nav-manage-links > ul > li > button > span {
+div.nav-manage-links > ul > li > input > span {
     font-size: 1.6rem;
     font-weight: 500;
     color: inherit;

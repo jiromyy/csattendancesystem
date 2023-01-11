@@ -9,6 +9,10 @@
     <script src="https://kit.fontawesome.com/b8e4159bd9.js" crossorigin="anonymous"></script>
 </head>
     <body>
+        <?php  
+        include("php/auth.php")
+        ?>
+
         <!-- nav-dashboard-container start --->
 
         <div class="nav-dashboard-container">
@@ -46,14 +50,12 @@
                             <i class="fa-regular fa-flag"></i>
                             <a href="#"><span>Attendance</span></a>
                         </li>
-                        <form action="" method="POST">
-                            <li>
-                            
+                        <li>
                             <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                            <input name="logout" type="submit"><h1>Log Out</h1></input>
-                            
+                            <form action="" method="POST">
+                                <input name="logout" type="submit"><span>Log Out</span></input>
+                            </form>
                         </li>
-                    </form>
                     </ul>
                 </div>
             </nav>
