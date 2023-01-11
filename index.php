@@ -11,8 +11,10 @@
 <body>
 
 <?php  
- include("php/auth.php")
+include("php/auth.php")
 ?>
+
+        <!-- Login Form --> 
         <div class="hug">
             <div class="left">
                 <img class="imgf" src="assets/mmsuadmin.jpg" alt="">
@@ -20,7 +22,7 @@
             <div class="right">
                 <div class="right-inner">
                 <form class="form" action="" method="POST">
-                <div class="emptydiv"></div>
+         
                     <div class="headframe">
                         <img class="img" src="assets/mmsulogo.png" alt="">
                         <h1 class="titletext">Event Attendance Portal</h1>
@@ -52,9 +54,8 @@
 
                     <button type="submit" name="login" class="loginbtn"><p class="text">Login<p></button>
                     <p class="forgotpass">Forgot Password?</p>
-
-                    
-                </form><p class="footer">Terms of Use</p>
+                  
+                </form>
                 </div>
             </div>
         </div>
