@@ -32,11 +32,12 @@
                     <div class="search-navigate">
                         <input type="text" name="searchbox" id="searchbox" placeholder="Search by event name, date">
                         <div class="search-nav">
-                            <select name="Sort" id="">
-                                <option value="eventName">Event name</option>
+                            <select name="Sort" id="sortEvents">
+                                <option selected disabled hidden>Sort</option>
+                                <option value="eventName">Event</option>
                                 <option value="date">Date</option>
                             </select>
-                            <button>Search</button>
+                            <button id="searchButton">Search</button>
                         </div>
                     </div>
                     <div></div>
