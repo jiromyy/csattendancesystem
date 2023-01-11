@@ -23,11 +23,11 @@
                     <div class="formframe">
                         <div>
                             <label class="label" for="username">Username</label>
-                            <input class="inputbox" type="text" name="username">
+                            <input class="inputbox" type="text" name="username" required placeholder="Enter username">
                         </div>
                         <div>
                             <label class="label" for="password">Password</label>
-                            <input class="inputbox" type="password" name="password">  
+                            <input class="inputbox" type="password" name="password" required placeholder="Enter password">  
                         </div>
                     </div>
                     <button class="loginbtn"><p class="text">Login<p></button>`
@@ -122,23 +122,6 @@ function test_input($data)
 } 
 
 ?>
-
-	<!-- Login Form -->
-	<div class="banner">
-		
-	<div class="form-container">
-	
-		<form action="<?php echo $_SERVER['PHP_SELF'];?>" method = "POST">	
-
-			<h3>LOGIN</h3>
-			<input type="text" name="username" required placeholder="Enter username" class="box">
-			<input type="password" name="psword" required placeholder="Enter password" class="box">
-			<input type="submit" name="login" class="btn" value="Login">
-			<p><a href=" ">Login</a></p>
-
-		</form>
-		</div>
-
 </body>
 
 </html>
