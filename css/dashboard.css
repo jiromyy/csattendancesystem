@@ -131,8 +131,6 @@ nav.nav-sidebar > div.nav-manage-links {
 div.nav-manage-links > ul {
     width: inherit;
     height: inherit;
-    padding: 0 1rem;
-
 }
 
 div.nav-manage-links > ul > li {
@@ -145,7 +143,7 @@ div.nav-manage-links > ul > li {
     column-gap: var(--column-gap-2);
     margin-bottom: 3rem;
     border-radius: 0.8rem;
-    padding: 0.8rem 1rem 0.8rem 2rem;
+    padding: 0.8rem 1rem 0.8rem 3rem;
     transition: var(--transition);
     cursor: pointer;
     color: var(--grey-text);
@@ -174,15 +172,11 @@ div.nav-manage-links > ul > li:nth-child(3) {
 div.nav-manage-links > ul > li:nth-child(3) > span {
     color: var(--red-text-2);
     font-size: 1.4rem;
+    cursor: initial;
 }
 
 div.nav-manage-links > ul > li:nth-child(7) {
     margin-bottom: 33rem;
-}
-
-div.nav-manage-links > ul > li:last-child {
-    width: auto;
-    height: auto;
 }
 
 div.nav-manage-links > ul > li > i {
@@ -346,6 +340,7 @@ div.dashboard-main > div.dashboard-calendar {
     border: var(--border-stroke);
     width: 35rem;
     height: 35rem;
+    cursor: pointer;
 }
 
 div.dashboard-calendar> img {
@@ -375,6 +370,7 @@ div.dashboard-main > div.dashboard-dropdown {
     align-items: center;
     border-radius: var(--border-radius);
     border: var(--border-stroke);
+    cursor: pointer;
 }
 
 div.dashboard-dropdown > i {
@@ -390,6 +386,7 @@ div.dashboard-main > div.dashboard-graph-1 {
     border: var(--border-stroke);
     width: 52rem;
     height: 31rem;
+    cursor: pointer;
 }
 
 div.dashboard-graph-1 > img {
@@ -410,6 +407,7 @@ div.dashboard-main > div.dashboard-graph-2 {
     align-items: center;
     border-radius: var(--border-radius);
     border: var(--border-stroke);
+    cursor: pointer;
 }
 
 div.dashboard-graph-2 > div.expected-attendee {
@@ -449,6 +447,7 @@ div.dashboard-main > div.dashboard-graph-3 {
     align-items: center;
     border-radius: var(--border-radius);
     border: var(--border-stroke);
+    cursor: pointer;
 }
 
 div.dashboard-graph-3 > div.incomplete-attendee {
@@ -487,6 +486,7 @@ div.dashboard-main > div.dashboard-graph-4 {
     align-items: center;
     border-radius: var(--border-radius);
     border: var(--border-stroke);
+    cursor: pointer;
 }
 
 div.dashboard-graph-4 > div.absent-attendee {
@@ -523,6 +523,7 @@ div.dashboard-main > div.dashboard-event {
     border: var(--border-stroke);
     width: 35rem;
     height: 35rem;
+    cursor: pointer;
 }
 
 div.dashboard-event> img {
@@ -537,6 +538,7 @@ div.dashboard-main > div.dashboard-data {
     border: var(--border-stroke);
     width: 90rem;
     height: 25rem;
+    cursor: pointer;
 }
 /* end dashboard */
 
