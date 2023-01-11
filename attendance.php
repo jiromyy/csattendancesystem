@@ -30,17 +30,34 @@
                         <a href="#">Events</a>
                     </div>
                     <div class="search-navigate">
-                        <form action="" method="post">
-                            <input type="text" name="searchbox" id="searchbox" placeholder="Search by event name, date">
-                            <button id="searchButton">Search</button>
-                            <select name="Sort" id="sortEvents">
-                                <option selected disabled hidden>Sort</option>
-                                <option value="eventName">Event</option>
-                                <option value="date">Date</option>
-                            </select>
-                        </form>
+                        <input type="text" name="searchbox" id="searchbox" placeholder="Search by event name, date">
+                        <button id="searchButton">Search</button>
+                        <select name="Sort" id="sortEvents">
+                            <option selected disabled hidden>Sort</option>
+                            <option value="eventName">Event</option>
+                            <option value="date">Date</option>
+                        </select>
                     </div>
-                    <div></div>
+                    <div class="eventsArea">
+                        <div class="card">
+                            <div class="upper-section">
+                                <h3>Host name here</h3>
+                                <h1>Event Name Here</h1>
+                            </div>
+                            <div class="lower-section">
+                                <h6>02-08-2023 to 02-10-2023</h6>
+                                <div class="eventDescription">
+                                    <h4>Event Description:</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio, cumque deserunt doloremque amet fuga reiciendis et voluptate magnam, eaque dolor nemo officia nostrum veniam minima, officiis a delectus qui.</p>
+                                </div>
+                                <div class="eventFines">
+                                    <h4>Fines</h4>
+                                    <p>10.00</p>
+                                </div>
+                                <a href="#">View</a>
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>

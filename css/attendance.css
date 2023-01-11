@@ -357,3 +357,77 @@ border-radius: 5px;
     background-color: #14a137;
     border-color: #14a137;
 }
+.eventsArea{
+    /* content area */
+
+overflow-y: scroll;
+width: 1500px;
+height: 680px;
+
+
+/* Inside auto layout */
+display: flex;
+flex-wrap: wrap;
+order: 2;
+flex-grow: 0;
+}
+.card{
+/* card */
+width: 410px;
+height: 350px;
+background: #f3f3f3;
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+margin: 15px;
+font-family: Arial, Helvetica, sans-serif;
+}
+.card:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+.card .upper-section{
+/* upper section */
+border-radius: 10px 10px 0px 0px;
+width: 410px;
+height: 160px;
+background: #117D2C;
+display: flex;
+flex-direction: column;
+padding-top: 50px;
+}
+.card .upper-section h3{
+/* Host name here */
+
+width: 121px;
+height: 21px;
+margin-left: 20px;
+font-family: Arial, Helvetica, sans-serif;
+font-style: normal;
+font-weight: 300;
+font-size: 17px;
+line-height: 21px;
+/* identical to box height */
+margin-bottom: 5px;
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+}
+.card .upper-section h1{
+/* Event Name Here */
+margin-left: 20px;
+width: 318px;
+height: 41px;
+margin-top: 0;
+font-family: Arial, Helvetica, sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 40px;
+/* identical to box height */
+letter-spacing: 2px;
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+}
