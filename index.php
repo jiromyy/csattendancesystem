@@ -11,7 +11,7 @@
 <body>
 
 <?php  
-    // include("php/auth.php")
+ include("php/auth.php")
 ?>
         <div class="hug">
             <div class="left">

@@ -24,14 +24,17 @@ if (isset($_POST['login'])) {
         $type = $row['usertype'];
         $_SESSION['id'] = $row['userID'];
         
-        if($type == "admin"){
-            header('location: Admin/home.php');
+        if($type == "super_admin"){
+            header('location: superdmin/home.php');
         }
-        else if($type == "client"){
-            header('location: Profile/home.php');
+        else if($type == "org_admin"){
+            header('location: admin/home.php');
         }
-        else if($type == "enforcer"){
-            header('location: Enforcer/home.php');
+        else if($type == "attendance_checker"){
+            header('location: attendancechecker/home.php');
+        }
+        else{
+            header('location: accountmanager/home.php');
         }
     }
 }

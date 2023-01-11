@@ -43,16 +43,15 @@ body {
 
 .right {
   /* right */
-  /* Auto layout */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  /* position: absolute; */
+  position: absolute;
   width: 50%;
   height: 100vh;
-  /* left: 50%; */
+  left: 50%; 
   top: 0%;
 
   background: #ffffff;
@@ -313,7 +312,7 @@ input .loginbtn .text {
   padding: 13px 25px;
   gap: 25px;
   width: 410.5px;
-  height: 90%%;
+  height: 90%;
   flex: none;
   order: 0;
   flex-grow: 0;
