@@ -30,7 +30,11 @@
                             <input class="inputbox" type="password" name="password">  
                         </div>
                     </div>
-                    <button class="loginbtn"><p class="text">Login<p></button>`
+                    <div class="empty"></div>
+                    <button class="loginbtn"><p class="text">Login<p></button>
+                    <p class="forgotpass">Forgot Password?</p>
+
+                    <p class="footer">Terms of Use</p>
                 </form>
             </div>
         </div>
@@ -109,7 +113,7 @@
 }
 
 //closing connection
-$connection->close();
+//$connection->close();
 
 //eliminating unwanted characters in the input fields
 function test_input($data)
@@ -122,22 +126,6 @@ function test_input($data)
 } 
 
 ?>
-
-	<!-- Login Form -->
-	<div class="banner">
-		
-	<div class="form-container">
-	
-		<form action="<?php echo $_SERVER['PHP_SELF'];?>" method = "POST">	
-
-			<h3>LOGIN</h3>
-			<input type="text" name="username" required placeholder="Enter username" class="box">
-			<input type="password" name="psword" required placeholder="Enter password" class="box">
-			<input type="submit" name="login" class="btn" value="Login">
-			<p><a href=" ">Login</a></p>
-
-		</form>
-		</div>
 
 </body>
 
