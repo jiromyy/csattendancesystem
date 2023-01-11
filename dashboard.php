@@ -11,7 +11,7 @@
     <body>
 
         <?php  
-        //include("php/auth.php")
+        include("php/auth.php")
         ?>
 
         <!-- nav-dashboard-container start --->
@@ -54,7 +54,9 @@
                         <li>
                             <i class="fa-solid fa-arrow-right-from-bracket"></i>
                             <form action="#" method="POST">
-                                <button name="logout" type="submit"><span>Logout</span></button>
+                                <button name="logout" type="submit">
+                                    <span>Logout</span>
+                                </button>
                             </form>
                         </li>
                     </ul>
@@ -73,34 +75,49 @@
                 </div>
                 <div class="dashboard-main">
                     <div class="dashboard-banner">
-                        banner
+                        <span>Hello, Super Admin!</span>
+                        <img src="assets/super-admin.png" alt="super admin">
                     </div>
                     <div class="dashboard-calendar">
-                        calendar
+                        <img src="assets/user_profile.jpg" alt="calendar">
                     </div>
                     <div class="dashboard-overview">
-                        overview
+                        <span>Overview</span>
                     </div>
                     <div class="dashboard-dropdown">
-                        dropdown
+                        <span>Comsoc Week Opening</span>
+                        <i class="fa-solid fa-chevron-down"></i>
                     </div>
-                    <div class="dashboard-graph1">
-                        graph1
+                    <div class="dashboard-graph-1">
+                        <img src="assets/user_profile.jpg" alt="calendar">
                     </div>
-                    <div class="dashboard-graph2">
-                        graph2
+                    <div class="dashboard-graph-2">
+                        <div class="expected-attendee">
+                            <span>Expected Attendee</span>
+                            <span>Events</span>
+                        </div>
+                        <span>319</span>
                     </div>
-                    <div class="dashboard-graph3">
-                        graph3
+                    <div class="dashboard-graph-3">
+                        <div class="incomplete-attendee">
+                            <span>Incomplete</span>
+                            <span>Incomplete Attendance Logs</span>
+                        </div>
+                        <span>20</span>
                     </div>
-                    <div class="dashboard-graph4">
-                        graph4
+                    <div class="dashboard-graph-4">
+                        <div class="absent-attendee">
+                            <span>Absent</span>
+                            <span>No Absent Logs</span>
+                        </div>
+                        <span>10</span>
                     </div>
                     <div class="dashboard-event">
-                        event
+
+                        <img src="assets/user_profile.jpg" alt="calendar">
                     </div>
                     <div class="dashboard-data">
-                        data
+
                     </div>
                 </div>
             </main>
