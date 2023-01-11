@@ -15,12 +15,12 @@
             <div class="section-1">
                 <h1>Attendance Report</h1>
                 <div class="sub-section">
-                    <img src="assets/user_profile.jpg" alt="user-profile">
                     <form action="" method="post">
-                    <div class="profile-info">
-                        <h3>John Carlo Bisquera</h3>
-                        <h6>Org Admin</h6>
-                    </div>
+                        <img src="assets/user_profile.jpg" alt="user-profile">
+                        <div class="profile-info">
+                            <h3>John Carlo Bisquera</h3>
+                            <h6>Org Admin</h6>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -31,15 +31,141 @@
                     </div>
                     <div class="search-navigate">
                         <input type="text" name="searchbox" id="searchbox" placeholder="Search by event name, date">
-                        <div class="search-nav">
-                            <select name="Sort" id="">
-                                <option value="eventName">Event name</option>
-                                <option value="date">Date</option>
-                            </select>
-                            <button>Search</button>
+                        <button id="searchButton">Search</button>
+                        <select name="Sort" id="sortEvents">
+                            <option selected disabled hidden>Sort</option>
+                            <option value="eventName">Event</option>
+                            <option value="date">Date</option>
+                        </select>
+                    </div>
+                    <div class="eventsArea">
+                        <div class="card">
+                            <div class="upper-section">
+                                <h3>Host name here</h3>
+                                <h1>Event Name Here</h1>
+                            </div>
+                            <div class="lower-section">
+                                <h6>02-08-2023 to 02-10-2023</h6>
+                                <div class="eventDescription">
+                                    <h4>Event Description:</h4>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In cum illo rem non excepturi corporis suscipit porro repudiandae vitae a!</p>
+                                </div>
+                                <div class="eventFines">
+                                    <h4>Fines:</h4>
+                                    <p>10.00</p>
+                                </div>
+                                <a href="#">View</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="upper-section">
+                                <h3>Host name here</h3>
+                                <h1>Event Name Here</h1>
+                            </div>
+                            <div class="lower-section">
+                                <h6>02-08-2023 to 02-10-2023</h6>
+                                <div class="eventDescription">
+                                    <h4>Event Description:</h4>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In cum illo rem non excepturi corporis suscipit porro repudiandae vitae a!</p>
+                                </div>
+                                <div class="eventFines">
+                                    <h4>Fines:</h4>
+                                    <p>10.00</p>
+                                </div>
+                                <a href="#">View</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="upper-section">
+                                <h3>Host name here</h3>
+                                <h1>Event Name Here</h1>
+                            </div>
+                            <div class="lower-section">
+                                <h6>02-08-2023 to 02-10-2023</h6>
+                                <div class="eventDescription">
+                                    <h4>Event Description:</h4>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In cum illo rem non excepturi corporis suscipit porro repudiandae vitae a!</p>
+                                </div>
+                                <div class="eventFines">
+                                    <h4>Fines:</h4>
+                                    <p>10.00</p>
+                                </div>
+                                <a href="#">View</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="upper-section">
+                                <h3>Host name here</h3>
+                                <h1>Event Name Here</h1>
+                            </div>
+                            <div class="lower-section">
+                                <h6>02-08-2023 to 02-10-2023</h6>
+                                <div class="eventDescription">
+                                    <h4>Event Description:</h4>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In cum illo rem non excepturi corporis suscipit porro repudiandae vitae a!</p>
+                                </div>
+                                <div class="eventFines">
+                                    <h4>Fines:</h4>
+                                    <p>10.00</p>
+                                </div>
+                                <a href="#">View</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="upper-section">
+                                <h3>Host name here</h3>
+                                <h1>Event Name Here</h1>
+                            </div>
+                            <div class="lower-section">
+                                <h6>02-08-2023 to 02-10-2023</h6>
+                                <div class="eventDescription">
+                                    <h4>Event Description:</h4>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In cum illo rem non excepturi corporis suscipit porro repudiandae vitae a!</p>
+                                </div>
+                                <div class="eventFines">
+                                    <h4>Fines:</h4>
+                                    <p>10.00</p>
+                                </div>
+                                <a href="#">View</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="upper-section">
+                                <h3>Host name here</h3>
+                                <h1>Event Name Here</h1>
+                            </div>
+                            <div class="lower-section">
+                                <h6>02-08-2023 to 02-10-2023</h6>
+                                <div class="eventDescription">
+                                    <h4>Event Description:</h4>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In cum illo rem non excepturi corporis suscipit porro repudiandae vitae a!</p>
+                                </div>
+                                <div class="eventFines">
+                                    <h4>Fines:</h4>
+                                    <p>10.00</p>
+                                </div>
+                                <a href="#">View</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="upper-section">
+                                <h3>Host name here</h3>
+                                <h1>Event Name Here</h1>
+                            </div>
+                            <div class="lower-section">
+                                <h6>02-08-2023 to 02-10-2023</h6>
+                                <div class="eventDescription">
+                                    <h4>Event Description:</h4>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In cum illo rem non excepturi corporis suscipit porro repudiandae vitae a!</p>
+                                </div>
+                                <div class="eventFines">
+                                    <h4>Fines:</h4>
+                                    <p>10.00</p>
+                                </div>
+                                <a href="#">View</a>
+                            </div>
                         </div>
                     </div>
-                    <div></div>
                 </form>
             </div>
         </div>
