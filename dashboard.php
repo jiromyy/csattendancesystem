@@ -9,6 +9,11 @@
     <script src="https://kit.fontawesome.com/b8e4159bd9.js" crossorigin="anonymous"></script>
 </head>
     <body>
+
+        <?php  
+        //include("php/auth.php")
+        ?>
+
         <!-- nav-dashboard-container start --->
 
         <div class="nav-dashboard-container">
@@ -48,7 +53,9 @@
                         </li>
                         <li>
                             <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                            <button href="#"><span>Log Out</span></button>
+                            <form action="#" method="POST">
+                                <button name="logout" type="submit"><span>Logout</span></button>
+                            </form>
                         </li>
                     </ul>
                 </div>

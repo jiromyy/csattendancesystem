@@ -46,7 +46,7 @@
 
 /* global adjustment */
 
-span, i {
+span, i, input{
     font-size: 1.6rem;
     font-weight: 400;
     color: var(--black-all);
@@ -141,6 +141,7 @@ div.nav-manage-links > ul > li {
     padding: 0.8rem 1rem 0.8rem 2rem;
     transition: var(--transition);
     cursor: pointer;
+    color: var(--grey-text);
 }
 
 div.nav-manage-links > ul > li:hover {
@@ -194,16 +195,27 @@ div.nav-manage-links > ul > li > a > span {
     color: inherit;
 }
 
-div.nav-manage-links > ul > li > button {
+div.nav-manage-links > ul > li > form {
     color: inherit;
-    border: none;
-    background-color: transparent;
 }
 
-div.nav-manage-links > ul > li > button > span {
+div.nav-manage-links > ul > li > form > button{
     font-size: 1.6rem;
     font-weight: 500;
     color: inherit;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+div.nav-manage-links > ul > li > form > button > span{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: inherit;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
 }
 
 /* end nav-sidebar */
@@ -286,10 +298,10 @@ main.dashboard > div.dashboard-main {
     "banner banner calendar"
     "overview overview calendar"
     "dropdown dropdown calendar"
-    "graph1 graph2 ."
+    "graph1 graph2 event"
     "graph1 graph3 event"
     "graph1 graph4 event"
-    "data data event"
+    "data data ."
     "data data ."
 }
 
