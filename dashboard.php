@@ -46,10 +46,14 @@
                             <i class="fa-regular fa-flag"></i>
                             <a href="#"><span>Attendance</span></a>
                         </li>
-                        <li>
+                        <form action="" method="POST">
+                            <li>
+                            
                             <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                            <button href="#"><span>Log Out</span></button>
+                            <input name="logout" type="submit"><h1>Log Out</h1></input>
+                            
                         </li>
+                    </form>
                     </ul>
                 </div>
             </nav>

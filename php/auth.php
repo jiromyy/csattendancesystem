@@ -55,6 +55,6 @@ function test_input($data)
 // USER LOGOUT  
 if (isset($_POST['logout'])){
    session_destroy();
-   header('location: ../index.php');
+   header('location: index.php');
    exit();
- }
+}
