@@ -16,28 +16,28 @@
                 <img class="imgf" src="img/mmsuadmin.jpg" alt="mmsuadmin.jpg">
             </div>
             <div class="right">
-                <form class="form" action="POST">
+                <form class="form" action="POST">inner
                     <div class="emptydiv"></div>
                     <div class="headframe">
                         <img class="img" src="img/mmsulogo.png" alt="">
                         <h1 class="titletext">Event Attendance Portal</h1>
                     </div>
                     <div class="formframe">
-                        <div>
+                        <div class="input-box-label">
                             <label class="label" for="username">Username</label>
                             <input class="inputbox" type="text" name="username" required placeholder="Enter username">
                         </div>
-                        <div>
+                        <div class="input-box-label">
                             <label class="label" for="password">Password</label>
                             <input class="inputbox" type="password" name="password" required placeholder="Enter password">  
                         </div>
                     </div>
-                    <div class="empty"></div>
+
                     <button class="loginbtn"><p class="text">Login<p></button>
                     <p class="forgotpass">Forgot Password?</p>
 
-                    <p class="footer">Terms of Use</p>
-                </form>
+                    
+                </form><p class="footer">Terms of Use</p>
             </div>
         </div>
         
