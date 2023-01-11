@@ -6,37 +6,53 @@ session_start();
 include("php/connectiondb.php");
 
 if (isset($_POST['login'])) {
-	$username = $_POST['username'];
-	$password = $_POST['password'];
+	$username = test_input($_POST['username']);
+	$password = test_input($_POST['password']);
 
 	
-    $password = sha1($password);
+    $password = sha1($password);//password encryption
     $query = "SELECT * FROM user WHERE username ='$username' AND password = '$password'";
     $results = mysqli_query($connection, $query);
     $row = mysqli_fetch_assoc($results);
     
-
     if(mysqli_num_rows($results) != 1){
         header('location: index.php?login=incorrect');
         exit();
     }
     else{
+
         $type = $row['usertype'];
         $_SESSION['id'] = $row['userID'];
-        
-        if($type == "admin"){
-            header('location: Admin/home.php');
+
+
+        //CHECKING TYPE OF USERS
+        if($type == "super_admin"){
+            header('location: superdmin/home.php');
         }
-        else if($type == "client"){
-            header('location: Profile/home.php');
+        else if($type == "org_admin"){
+            header('location: admin/home.php');
         }
-        else if($type == "enforcer"){
-            header('location: Enforcer/home.php');
+        else if($type == "attendance_checker"){
+            header('location: attendancechecker/home.php');
+        }
+        else{
+            header('location: accountmanager/home.php');
         }
     }
 }
 
-  // USER LOGOUT  
+
+//eliminating unwanted characters in the input fields
+function test_input($data)
+{
+	$data = trim($data);
+	$data = stripslashes($data);
+	$data = htmlspecialchars($data);
+
+	return $data;
+} 
+
+// USER LOGOUT  
 if (isset($_POST['logout'])){
    session_destroy();
    header('location: ../index.php');

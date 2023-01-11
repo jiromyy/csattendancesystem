@@ -1,0 +1,254 @@
+body{
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+.attendance-page{
+    /* 3. Events for Super Admin */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+}
+.Nav-Panel{
+    box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 25px;
+
+width: 275.19px;
+height: 970px;
+
+background: #FFFFFF;
+border-right: 1px solid #E8E8E8;
+
+}
+.Content-Area{
+    /* RIght */
+
+
+width: 1160.81px;
+height: 970px;
+
+background: #FFFFFF;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 1;
+}
+.section-1{
+ /* Frame 1000000927 */
+
+
+box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 25px;
+width: 1650px;
+height: 105px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+border-bottom: 1px solid #E8E8E8;
+}
+.section-1 h1{
+    /* Events */
+
+
+width: 309px;
+height: 46px;
+
+font-family: Arial, Helvetica, sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 35px;
+line-height: 52px;
+display: flex;
+align-items: center;
+letter-spacing: -0.03em;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.section-1 .sub-section{
+    /* Frame 1000000922 */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 1px 0px 1px 12px;
+gap: 20px;
+
+width: 164px;
+height: 55px;
+
+background: #FFFFFF;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+.section-1 img {
+    /* Frame 1000000923 */
+
+margin: 0;
+padding: 0;
+width: 60px;
+height: 60px;
+
+background: #666666;
+border-radius: 100px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.profile-info{
+    /* Frame 1000000925 */
+
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+width: 100px;
+height: 40px;
+gap: 5px;
+margin: 0;
+padding: 0;
+
+background: #FFFFFF;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+.profile-info h3{
+    /* Username */
+margin: 0;
+
+width: 100px;
+
+font-family: Arial, Helvetica, sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+/* identical to box height, or 100% */
+
+display: flex;
+align-items: center;
+
+color: #666666;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.profile-info h6{
+    /* Org Admin */
+
+margin: 0;
+width: 55px;
+
+font-family: Arial, Helvetica, sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 10px;
+/* identical to box height, or 160% */
+
+display: flex;
+align-items: center;
+
+color: #969696;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+.section-2{
+    display: flex;
+    flex-direction: row;
+}
+.page-navigate{
+   /* Frame 1000000850 */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px 0px 10px;
+gap: 10px;
+
+width: 1111px;
+height: 40px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+}
+.page-navigate h3{
+    /* Events */
+width: 65px;
+height: 30px;
+
+font-family: Arial, Helvetica, sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #A8A4A4;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
