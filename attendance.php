@@ -15,12 +15,12 @@
             <div class="section-1">
                 <h1>Attendance Report</h1>
                 <div class="sub-section">
-                    <img src="assets/user_profile.jpg" alt="user-profile">
                     <form action="" method="post">
-                    <div class="profile-info">
-                        <h3>John Carlo Bisquera</h3>
-                        <h6>Org Admin</h6>
-                    </div>
+                        <img src="assets/user_profile.jpg" alt="user-profile">
+                        <div class="profile-info">
+                            <h3>John Carlo Bisquera</h3>
+                            <h6>Org Admin</h6>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -30,15 +30,15 @@
                         <a href="#">Events</a>
                     </div>
                     <div class="search-navigate">
-                        <input type="text" name="searchbox" id="searchbox" placeholder="Search by event name, date">
-                        <div class="search-nav">
+                        <form action="" method="post">
+                            <input type="text" name="searchbox" id="searchbox" placeholder="Search by event name, date">
+                            <button id="searchButton">Search</button>
                             <select name="Sort" id="sortEvents">
                                 <option selected disabled hidden>Sort</option>
                                 <option value="eventName">Event</option>
                                 <option value="date">Date</option>
                             </select>
-                            <button id="searchButton">Search</button>
-                        </div>
+                        </form>
                     </div>
                     <div></div>
                 </form>
