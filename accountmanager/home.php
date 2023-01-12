@@ -5,14 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
     <script src="https://kit.fontawesome.com/b8e4159bd9.js" crossorigin="anonymous"></script>
 </head>
     <body>
-
         <?php  
-        include("php/auth.php");
-        include("php/check_session.php")
+        include("../php/auth.php");
+        include("../php/check_session.php")
         ?>
 
         <!-- nav-dashboard-container start --->
@@ -54,10 +53,8 @@
                         </li>
                         <li>
                             <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                            <form action="#" method="POST">
-                                <button name="logout" type="submit">
-                                    <span>Logout</span>
-                                </button>
+                            <form action="" method="POST">
+                                <input name="logout" type="submit"><span>Log Out</span></input>
                             </form>
                         </li>
                     </ul>
@@ -76,49 +73,34 @@
                 </div>
                 <div class="dashboard-main">
                     <div class="dashboard-banner">
-                        <span>Hello, Super Admin!</span>
-                        <img src="assets/super-admin.png" alt="super admin">
+                        banner
                     </div>
                     <div class="dashboard-calendar">
-                        <img src="assets/user_profile.jpg" alt="calendar">
+                        calendar
                     </div>
                     <div class="dashboard-overview">
-                        <span>Overview</span>
+                        overview
                     </div>
                     <div class="dashboard-dropdown">
-                        <span>Comsoc Week Opening</span>
-                        <i class="fa-solid fa-chevron-down"></i>
+                        dropdown
                     </div>
-                    <div class="dashboard-graph-1">
-                        <img src="assets/user_profile.jpg" alt="calendar">
+                    <div class="dashboard-graph1">
+                        graph1
                     </div>
-                    <div class="dashboard-graph-2">
-                        <div class="expected-attendee">
-                            <span>Expected Attendee</span>
-                            <span>Events</span>
-                        </div>
-                        <span>319</span>
+                    <div class="dashboard-graph2">
+                        graph2
                     </div>
-                    <div class="dashboard-graph-3">
-                        <div class="incomplete-attendee">
-                            <span>Incomplete</span>
-                            <span>Incomplete Attendance Logs</span>
-                        </div>
-                        <span>20</span>
+                    <div class="dashboard-graph3">
+                        graph3
                     </div>
-                    <div class="dashboard-graph-4">
-                        <div class="absent-attendee">
-                            <span>Absent</span>
-                            <span>No Absent Logs</span>
-                        </div>
-                        <span>10</span>
+                    <div class="dashboard-graph4">
+                        graph4
                     </div>
                     <div class="dashboard-event">
-
-                        <img src="assets/user_profile.jpg" alt="calendar">
+                        event
                     </div>
                     <div class="dashboard-data">
-
+                        data
                     </div>
                 </div>
             </main>
