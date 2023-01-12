@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Manage Events</title>
-  <link rel="stylesheet" href="../css/manage-events.css" />
+  <link rel="stylesheet" href="css/manage-events.css" />
   <!-- icons -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <script src="https://kit.fontawesome.com/b8e4159bd9.js" crossorigin="anonymous"></script>
@@ -51,7 +51,7 @@ if (isset($_POST['create_event'])) {
     <!-- start of sidebar -->
     <nav class="nav-sidebar">
       <div class="nav-logo">
-        <img src="../assets/university-logo.png" alt="university logo">
+        <img src="assets/university-logo.png" alt="university logo">
         <span>Attendance Portal</span>
       </div>
       <div class="nav-manage-links">
@@ -98,7 +98,7 @@ if (isset($_POST['create_event'])) {
       <div class="events-header">
         <span>Events</span>
         <div class="user">
-          <img src="../assets/user.jpg" alt="Emman Gwapo">
+          <img src="assets/user.jpg" alt="Emman Gwapo">
           <div class="user-info">
             <span>Emman Adonay</span>
             <span>Super User</span>
@@ -298,7 +298,7 @@ if (isset($_POST['create_event'])) {
 
 
 
-  <script src="../script/events.js"></script>
+  <script src="script/events.js"></script>
 </body>
 
 </html>
