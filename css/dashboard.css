@@ -26,6 +26,8 @@
     --blue-text: #0000FF;
     --red-text: #FF0000;
     --red-text-2: #CE9E9E;
+    --gradient-purple-l: #9747FF;
+    --gradient-purple-d: #655B96;
 
     /* transition */
 
@@ -42,6 +44,11 @@
     --column-gap-2: 1.8rem;
     --column-gap-3: 4rem;
 
+    /* border radius */
+    --border-radius: 1rem;
+
+    /* border stroke */
+    --border-stroke: solid .2rem var(--grey-stroke);
 }
 
 /* global adjustment */
@@ -124,8 +131,6 @@ nav.nav-sidebar > div.nav-manage-links {
 div.nav-manage-links > ul {
     width: inherit;
     height: inherit;
-    padding: 0 1rem;
-
 }
 
 div.nav-manage-links > ul > li {
@@ -138,7 +143,7 @@ div.nav-manage-links > ul > li {
     column-gap: var(--column-gap-2);
     margin-bottom: 3rem;
     border-radius: 0.8rem;
-    padding: 0.8rem 1rem 0.8rem 2rem;
+    padding: 0.8rem 1rem 0.8rem 3rem;
     transition: var(--transition);
     cursor: pointer;
     color: var(--grey-text);
@@ -167,15 +172,11 @@ div.nav-manage-links > ul > li:nth-child(3) {
 div.nav-manage-links > ul > li:nth-child(3) > span {
     color: var(--red-text-2);
     font-size: 1.4rem;
+    cursor: initial;
 }
 
 div.nav-manage-links > ul > li:nth-child(7) {
     margin-bottom: 33rem;
-}
-
-div.nav-manage-links > ul > li:last-child {
-    width: auto;
-    height: auto;
 }
 
 div.nav-manage-links > ul > li > i {
@@ -208,7 +209,7 @@ div.nav-manage-links > ul > li > form > button{
     cursor: pointer;
 }
 
-div.nav-manage-links > ul > li > form > button > span{
+div.nav-manage-links > ul > li > form > button > span {
     font-size: 1.6rem;
     font-weight: 500;
     color: inherit;
@@ -289,70 +290,255 @@ main.dashboard > div.dashboard-main {
     height: calc(100% - 10rem);
     position: relative;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    column-gap: 1rem;
-    row-gap: 1rem;
-    padding: 1rem;
-    grid-template-areas:
-    "banner banner calendar"
-    "overview overview calendar"
-    "dropdown dropdown calendar"
-    "graph1 graph2 event"
-    "graph1 graph3 event"
-    "graph1 graph4 event"
-    "data data ."
-    "data data ."
-}
-
-div.dashboard-main > * {
-    border: solid 0.1rem black;
-    font-size: 5rem;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 3fr 0.8fr 0.8fr repeat(3, 2fr) 1.5fr 4fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
     padding: 2rem;
+    grid-template-areas:
+    "banner banner banner banner calendar calendar"
+    "overview . . . calendar calendar"
+    "dropdown dropdown dropdown dropdown calendar calendar"
+    "graph-1 graph-1 graph-2 graph-2 calendar calendar"
+    "graph-1 graph-1 graph-3 graph-3 event event"
+    "graph-1 graph-1 graph-4 graph-4 event event"
+    "data data data data event event"
+    "data data data data . .";
 }
 
 div.dashboard-main > div.dashboard-banner{
+    width: 90rem;
+    height: 15rem;
     grid-area: banner;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0 2rem;
+    align-items: center;
+    background-image: linear-gradient(to right, var(--gradient-purple-l), var(--gradient-purple-d));
+    border-radius: var(--border-radius);
+    border: none;
+}
+
+div.dashboard-banner > span {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--white-all);
+}
+
+div.dashboard-banner > img {
+    width: 20rem;
+    height: auto;
 }
 
 div.dashboard-main > div.dashboard-calendar {
     grid-area: calendar; 
+    position: absolute;
+    right: 0;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    border: var(--border-stroke);
+    width: 35rem;
+    height: 35rem;
+    cursor: pointer;
+}
+
+div.dashboard-calendar> img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
 }
 
 div.dashboard-main > div.dashboard-overview {
     grid-area: overview; 
 }
 
+div.dashboard-overview > span {
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: var(--black-all);
+}
+
 div.dashboard-main > div.dashboard-dropdown {
     grid-area: dropdown; 
+    width: 90rem;
+    height: 5rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0 2rem;
+    align-items: center;
+    border-radius: var(--border-radius);
+    border: var(--border-stroke);
+    cursor: pointer;
 }
 
-div.dashboard-main > div.dashboard-graph1 {
-    grid-area: graph1; 
+div.dashboard-dropdown > i {
+    cursor: pointer;
 }
 
-div.dashboard-main > div.dashboard-graph2 {
-    grid-area: graph2; 
+div.dashboard-main > div.dashboard-graph-1 {
+    grid-area: graph-1; 
+    position: absolute;
+    right: 0;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    border: var(--border-stroke);
+    width: 52rem;
+    height: 31rem;
+    cursor: pointer;
 }
 
-div.dashboard-main > div.dashboard-graph3 {
-    grid-area: graph3; 
+div.dashboard-graph-1 > img {
+    width: 49.5rem;
+    height: 100%;
+    border-radius: var(--border-radius);
 }
 
-div.dashboard-main > div.dashboard-graph4 {
-    grid-area: graph4; 
+
+div.dashboard-main > div.dashboard-graph-2 {
+    grid-area: graph-2; 
+    width: 36rem;
+    height: 9rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0 2rem;
+    align-items: center;
+    border-radius: var(--border-radius);
+    border: var(--border-stroke);
+    cursor: pointer;
+}
+
+div.dashboard-graph-2 > div.expected-attendee {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+div.dashboard-graph-2 > span {
+    font-weight: 500;
+    font-size: 2.4rem;
+    color: var(--black-all);
+}
+
+div.expected-attendee > span:first-child{
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--black-all);
+}
+
+div.expected-attendee > span:last-child{
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--black-all);
+}
+
+
+div.dashboard-main > div.dashboard-graph-3 {
+    grid-area: graph-3; 
+    width: 36rem;
+    height: 9rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0 2rem;
+    align-items: center;
+    border-radius: var(--border-radius);
+    border: var(--border-stroke);
+    cursor: pointer;
+}
+
+div.dashboard-graph-3 > div.incomplete-attendee {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+div.dashboard-graph-3 > span {
+    font-weight: 500;
+    font-size: 2.4rem;
+    color: var(--blue-text);
+}
+
+div.incomplete-attendee > span:first-child{
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--black-all);
+}
+
+div.incomplete-attendee > span:last-child{
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--black-all);
+}
+
+div.dashboard-main > div.dashboard-graph-4 {
+    grid-area: graph-4; 
+    width: 36rem;
+    height: 9rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0 2rem;
+    align-items: center;
+    border-radius: var(--border-radius);
+    border: var(--border-stroke);
+    cursor: pointer;
+}
+
+div.dashboard-graph-4 > div.absent-attendee {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+div.dashboard-graph-4 > span {
+    font-weight: 500;
+    font-size: 2.4rem;
+    color: var(--red-text);
+}
+
+div.absent-attendee > span:first-child{
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--black-all);
+}
+
+div.absent-attendee > span:last-child{
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--black-all);
 }
 
 div.dashboard-main > div.dashboard-event {
     grid-area: event; 
+    position: absolute;
+    right: 0;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    border: var(--border-stroke);
+    width: 35rem;
+    height: 35rem;
+    cursor: pointer;
+}
+
+div.dashboard-event> img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
 }
 
 div.dashboard-main > div.dashboard-data {
     grid-area: data; 
+    border-radius: var(--border-radius);
+    border: var(--border-stroke);
+    width: 90rem;
+    height: 25rem;
+    cursor: pointer;
 }
 /* end dashboard */
 
