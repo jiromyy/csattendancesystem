@@ -2,6 +2,9 @@
 <!-- NEED TABLE FOR SHOWING RECORDS -- >
 
 <?php
+
+include('connectiondb.php')
+
  //displaying sql queries
 $display = "SELECT id, name, FROM ";//querie varies depending on admin type
 $data = $connection->query($display);
@@ -20,4 +23,6 @@ else
 {
     exit("no record");
 }	
+
+$connection->close();
 ?>
