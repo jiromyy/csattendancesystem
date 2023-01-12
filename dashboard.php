@@ -11,8 +11,9 @@
     <body>
 
         <?php  
-        include("php/auth.php");
-        include("php/check_session.php")
+        include "php/auth.php";
+        include "php/check_session.php";
+        $user =  $_SESSION['user'];
         ?>
 
         <!-- nav-dashboard-container start --->
@@ -25,7 +26,7 @@
                 </div>
                 <div class="nav-manage-links">
                     <ul>
-                        <li>
+                        <li <?php if($user != "account_manager") echo 'style="display:none"'; ?>>
                             <i class="fa-solid fa-chart-column"></i>
                             <a href="#"><span>Dashboard</span></a>
                         </li>
