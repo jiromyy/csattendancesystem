@@ -175,7 +175,7 @@ div.left-search-navigate input.search {
   height: 100%;
 
   background: #fffafa;
-  border: 1px solid #e8e8e8;
+  border: 1px solid var(--grey-stroke);
   border-radius: 10px;
 
   /* Inside auto layout */
@@ -185,7 +185,7 @@ div.left-search-navigate input.search {
   flex-grow: 0;
 
   background: #fffafa;
-  border: 1px solid #e8e8e8;
+  border: 1px solid var(--grey-stroke);
 
   /* Inside auto layout */
 
@@ -196,7 +196,7 @@ div.left-search-navigate input.search {
 
 div.left-search-navigate input.search:focus {
   outline: none !important;
-  border: 1px solid #e8e8e8;
+  border: 1px solid var(--grey-stroke);
 }
 
 div.right-search-navigate select.sort:focus {
@@ -206,19 +206,19 @@ div.right-search-navigate select.sort:focus {
 /* start of changing placeholder color */
 div.left-search-navigate input.search::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #e8e8e8;
+  color: var(--grey-stroke);
   opacity: 1;
   /* Firefox */
 }
 
 div.left-search-navigate input.search:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: #e8e8e8;
+  color: var(--grey-stroke);
 }
 
 div.left-search-navigate input.search::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: #e8e8e8;
+  color: var(--grey-stroke);
 }
 
 /* end of changing placeholder color */
@@ -334,7 +334,8 @@ tbody th {
 
 /* modal */
 /* The Modal (background) */
-.modal {
+.modal,
+.edit-modal {
   display: none;
   /* Hidden by default */
   position: fixed;
@@ -524,7 +525,7 @@ form.add_event_form {
   height: 64px;
 
   background: #ffffff;
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: 1px solid var(--grey-stroke);
 
   /* Inside auto layout */
 
@@ -636,7 +637,7 @@ header.header {
   z-index: 100;
 
   background: #f9f9f9;
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: 1px solid var(--grey-stroke);
 }
 
 header.header h1 {
