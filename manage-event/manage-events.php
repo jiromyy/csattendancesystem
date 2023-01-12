@@ -61,7 +61,7 @@
     </nav>
     <main class="events">
       <div class="events-header">
-        <span>Dashboard</span>
+        <span>Events</span>
         <div class="user">
           <img src="../assets/user.jpg" alt="Emman Gwapo">
           <div class="user-info">
