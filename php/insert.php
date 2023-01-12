@@ -1,20 +1,25 @@
 <?php
 
+
 include('connectiondb.php')
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
-	$ID = test_input($_POST['ID']);
-
- 	//sql query for delete
-	$sql = "DELETE FROM  WHERE id = '$ID' ";
+	
+    //variables for inserting new records
+    $name = test_input()
+    
+ 	//sql query for adding record
+	$sql = "INSERT INTO student()
+	VALUES ('')";
 
 	if($connection->query($sql) === TRUE)
 	{
 		echo '<script type="text/javascript">
-			  alert("Record Deleted!");
-			  window.location.href = "admindelete.php";
-         	  </script>';
+			  alert("Record Added!");
+			  window.location.href = "adminindex.php";
+			  </script>';
+
 	}
 	else
 	{
@@ -22,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 	}
 }
 
-//removing uncessary event in the input
+//removing uncessary datas in the input
 function test_input($data)
 {
 	$data = trim($data);
@@ -33,6 +38,4 @@ function test_input($data)
 } 
 
 $connection->close();
- ?>
-
 ?>
