@@ -5,7 +5,7 @@ $password = "";
 $dbname = "attendancesystem";
 
 //creating connection
-$connection = new mysqli($servername,$username,$password, $dbname);
+$connection = new mysqli($servername, $username, $password, $dbname);
  
 //checking connection
 if($connection->connect_error)

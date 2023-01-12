@@ -3,7 +3,7 @@ if(session_status() !== PHP_SESSION_ACTIVE){
 session_start();
 }
 
-include("php/connectiondb.php");
+include("connectiondb.php");
 
 if (isset($_POST['login'])) {
 	$username = test_input($_POST['username']);
@@ -22,8 +22,7 @@ if (isset($_POST['login'])) {
     else{
 
         $type = $row['usertype'];
-        $_SESSION['id'] = $row['userID'];
-
+        $_SESSION['id'] = $row['user_id'];
 
         //CHECKING TYPE OF USERS
         if($type == "super_admin"){

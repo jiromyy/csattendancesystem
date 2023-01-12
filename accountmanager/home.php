@@ -9,60 +9,103 @@
     <script src="https://kit.fontawesome.com/b8e4159bd9.js" crossorigin="anonymous"></script>
 </head>
     <body>
+        <?php  
+        include("../php/auth.php");
+        include("../php/check_session.php")
+        ?>
+
+        <!-- nav-dashboard-container start --->
+
         <div class="nav-dashboard-container">
             <nav class="nav-sidebar">
                 <div class="nav-logo">
                     <img src="assets/university-logo.png" alt="university logo">
-                    <h1>Attendance Portal</h1>
+                    <span>Attendance Portal</span>
                 </div>
                 <div class="nav-manage-links">
                     <ul>
                         <li>
                             <i class="fa-solid fa-chart-column"></i>
-                            <a href="#"></a><h1>Dashboard</h1>
+                            <a href="#"><span>Dashboard</span></a>
                         </li>
                         <li>
                             <i class="fa-solid fa-pencil"></i>
-                            <a href="#"></a><h1>Get Attendance</h1>
+                            <a href="#"><span>Get Attendance</span></a>
                         </li>
-                        <h2>Manage</h2>
+                        <li>
+                            <span>Manage</span>
+                        </li>
                         <li>
                             <i class="fa-solid fa-wallet"></i>
-                            <a href="#"></a><h1>Accounts</h1>
+                            <a href="#"><span>Accounts</span></a>
                         </li>
                         <li>
                             <i class="fa-regular fa-note-sticky"></i>
-                            <a href="#"></a><h1>Events</h1>
+                            <a href="#"><span>Events</span></a>
                         </li>
                         <li>
                             <i class="fa-solid fa-users"></i>
-                            <a href="#"></a><h1>Attendee</h1>
+                            <a href="#"><span>Attendee</span></a>
                         </li>
                         <li>
                             <i class="fa-regular fa-flag"></i>
-                            <a href="#"></a><h1>Attendance</h1>
+                            <a href="#"><span>Attendance</span></a>
                         </li>
                         <li>
                             <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                            <a href="#"></a><h1>Log Out</h1>
+                            <form action="" method="POST">
+                                <input name="logout" type="submit"><span>Log Out</span></input>
+                            </form>
                         </li>
                     </ul>
                 </div>
             </nav>
-            <div class="dashboard">
-                <header class="dashboard-header">
-                    <h1>Dashboard</h1>
+            <main class="dashboard">
+                <div class="dashboard-header">
+                    <span>Dashboard</span>
                     <div class="user">
-                        <img src="assets/organization-logo.png" alt="user photo">
+                        <img src="assets/user.jpg" alt="Emman Gwapo">
                         <div class="user-info">
-                            <h1>User Name</h1>
-                            <h1>Org Status</h1>
+                            <span>Emman Adonay</span>
+                            <span>Super User</span>
                         </div>
                     </div>
-                </header>
-                <main class="dashboard-main">
-                </main>
-            </div>
+                </div>
+                <div class="dashboard-main">
+                    <div class="dashboard-banner">
+                        banner
+                    </div>
+                    <div class="dashboard-calendar">
+                        calendar
+                    </div>
+                    <div class="dashboard-overview">
+                        overview
+                    </div>
+                    <div class="dashboard-dropdown">
+                        dropdown
+                    </div>
+                    <div class="dashboard-graph1">
+                        graph1
+                    </div>
+                    <div class="dashboard-graph2">
+                        graph2
+                    </div>
+                    <div class="dashboard-graph3">
+                        graph3
+                    </div>
+                    <div class="dashboard-graph4">
+                        graph4
+                    </div>
+                    <div class="dashboard-event">
+                        event
+                    </div>
+                    <div class="dashboard-data">
+                        data
+                    </div>
+                </div>
+            </main>
         </div>
+
+        <!-- nav-dashboard-ontainer end --->
     </body>
 </html>

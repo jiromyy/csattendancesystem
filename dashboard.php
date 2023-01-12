@@ -11,7 +11,8 @@
     <body>
 
         <?php  
-        //include("php/auth.php")
+        include("php/auth.php");
+        include("php/check_session.php")
         ?>
 
         <!-- nav-dashboard-container start --->
