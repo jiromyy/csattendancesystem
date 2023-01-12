@@ -12,7 +12,16 @@
 
         <?php  
         include("php/auth.php");
-        include("php/check_session.php")
+        $user = $_SESSION['user'];
+        include("php/check_session.php");
+        $type = $user === "account_manager" ? "Account Manager" : 
+            ($user === "org_admin" ? "Organization Admin": 
+                ($user === "attendance_checker" ? "Attendance Checker":
+                    ($user === "super_admin" ? "Super Admin": "Else"
+                    )
+                )
+            ); 
+        
         ?>
 
         <!-- nav-dashboard-container start --->
@@ -70,13 +79,13 @@
                         <img src="assets/user.jpg" alt="Emman Gwapo">
                         <div class="user-info">
                             <span>Emman Adonay</span>
-                            <span>Super User</span>
+                            <span><?php echo $type ?></span>
                         </div>
                     </div>
                 </div>
                 <div class="dashboard-main">
                     <div class="dashboard-banner">
-                        <span>Hello, Super Admin!</span>
+                        <span>Hello, <?php echo $type ?>!</span>
                         <img src="assets/super-admin.png" alt="super admin">
                     </div>
                     <div class="dashboard-calendar">

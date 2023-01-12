@@ -20,23 +20,10 @@ if (isset($_POST['login'])) {
         exit();
     }
     else{
-
-        $type = $row['usertype'];
+        $_SESSION['user'] = $row['account_type'];
         $_SESSION['id'] = $row['user_id'];
-
-        //CHECKING TYPE OF USERS
-        if($type == "super_admin"){
-            header('location: superdmin/home.php');
-        }
-        else if($type == "org_admin"){
-            header('location: admin/home.php');
-        }
-        else if($type == "attendance_checker"){
-            header('location: attendancechecker/home.php');
-        }
-        else{
-            header('location: accountmanager/home.php');
-        }
+        header('location: dashboard.php');
+        
     }
 }
 
