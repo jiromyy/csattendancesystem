@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 	}
 }
 
+
 //removing uncessary event in the input
 function test_input($data)
 {
@@ -35,5 +36,3 @@ function test_input($data)
 
 $connection->close();
  ?>
-
-?>
