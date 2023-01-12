@@ -14,8 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 		echo '<script type="text/javascript">
 			  alert("Record Deleted!");
 			  window.location.href = "admindelete.php";
-			  </script>';
-
+         	  </script>';
 	}
 	else
 	{
