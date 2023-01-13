@@ -10,6 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
  	$somedata = test_input($_POST['']);
 
  	//sql query for update
+	//NEED VALID VALUES FOR THE QUERIES
 	$sql = "UPDATE menu SET id = '$ID',name ='$name', ='$' WHERE id = '$ID' ";
 
 	if($connection->query($sql) === TRUE)

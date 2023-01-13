@@ -7,7 +7,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 	$ID = test_input($_POST['ID']);
 
  	//sql query for delete
-	//$sql = "DELETE FROM  WHERE id = '$ID' ";
+//$sql = "INSERT INTO name-of-table()
+//      VALUES(need_values) ";
 
 	if($connection->query($sql) === TRUE)
 	{

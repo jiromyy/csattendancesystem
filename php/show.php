@@ -5,8 +5,9 @@
 
 include('connectiondb.php')
 
- //displaying sql queries
-$display = "SELECT id, name, FROM ";//querie varies depending on admin type
+//displaying sql queries
+//NEED VALID VALUES FOR THE QUERY
+//$display = "SELECT id, name, FROM ";//querie varies depending on admin type
 $data = $connection->query($display);
 
 if($data->num_rows > 0)
