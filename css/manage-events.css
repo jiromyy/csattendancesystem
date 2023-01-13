@@ -51,12 +51,16 @@ html {
 
 span,
 i,
-input {
+input,
+option {
   font-size: 1.6rem;
   font-weight: 400;
   color: var(--black-all);
 }
 
+select#session {
+  font-size: 16px;
+}
 img {
   width: 3.2rem;
   height: auto;
@@ -319,7 +323,10 @@ tbody th {
 
 .btn-group-sm a:hover {
   background: var(--button-primary);
-  color: red;
+  color: var(--white-all);
+}
+.btn-group-sm a:hover span {
+  color: var(--white-all);
 }
 
 .btn-group-sm a span {
@@ -365,7 +372,7 @@ tbody th {
 .modal-content {
   border-radius: 8px;
   background-color: #fefefe;
-  margin: 5% auto;
+  margin: 10% auto;
   /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
@@ -439,7 +446,14 @@ tbody th {
   cursor: pointer;
 }
 
-.close:hover {
+.submit.delete-confirmation {
+  width: 100%;
+  background: #efeffd;
+  color: var(--button-primary);
+}
+
+.submit.delete-confirmation:hover {
+  color: white;
 }
 
 .close:hover,
@@ -517,10 +531,11 @@ form.add_event_form {
   /* Auto layout */
 
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
   /* justify-content: center; */
   align-items: center;
-  padding: 0 0 0 10px;
+  padding: 0 10px 0 10px;
 
   height: 64px;
 
@@ -533,6 +548,7 @@ form.add_event_form {
   order: 0;
   align-self: stretch;
   flex-grow: 0;
+  font-size: 36px;
 }
 
 .input-div {
@@ -570,8 +586,23 @@ form.add_event_form {
 
   /* Inside auto layout */
 }
+.input-div .input-for-2 {
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 0px;
+  gap: 8px;
+
+  width: 50%;
+  height: 74px;
+
+  /* Inside auto layout */
+}
 
 .input-div .input-for-1 label,
+.input-div .input-for-2 label,
 .input-div .input-for-3 label {
   /* Input Text Label */
 
@@ -837,13 +868,17 @@ div.nav-logo > span {
 
 nav.nav-sidebar > div.nav-manage-links {
   width: 100%;
-  height: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-div.nav-manage-links > ul {
+div.nav-manage-links > ul:nth-child(1) {
   width: inherit;
-  height: inherit;
+  height: 100%;
   padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 div.nav-manage-links > ul > li {
@@ -887,7 +922,7 @@ div.nav-manage-links > ul > li:nth-child(3) > span {
 }
 
 div.nav-manage-links > ul > li:nth-child(7) {
-  margin-bottom: 33rem;
+  /* margin-bottom: 33rem; */
 }
 
 div.nav-manage-links > ul > li:last-child {
@@ -1059,3 +1094,102 @@ div.events-main > div.events-data {
 /* end events */
 
 /* start nav-events_container */
+
+ul.m {
+  padding: 0;
+  list-style: none;
+  background: #f2f2f2;
+}
+ul.m li {
+  display: inline-block;
+  position: relative;
+  line-height: 21px;
+  text-align: right;
+}
+ul.m li a {
+  display: block;
+  padding: 8px 25px;
+  color: #333;
+  text-decoration: none;
+}
+ul.m li a:hover {
+  color: #fff;
+  background: #939393;
+}
+div.dropdown {
+  min-width: 125px; /* Set width of the dropdown */
+  background: #f2f2f2;
+  /* display: none; */
+  position: absolute;
+  z-index: 999;
+  top: 100px;
+  right: 0;
+}
+.user-info:hover ul.dropdown {
+  display: block; /* Display the dropdown */
+}
+ul.m li ul.dropdown li {
+  display: block;
+}
+
+/* event card*/
+#delete_event_modal .modal-content {
+  /* display: flex; */
+  /* gap: 20px; */
+  /* padding: 0; */
+  max-width: 800px;
+  color: #4a4a68;
+  /* overflow: hidden; */
+  border: 2px solid #efeffd;
+}
+#read_event_modal .modal-content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 0;
+  max-width: 800px;
+  color: #4a4a68;
+  overflow: hidden;
+  border: 2px solid #efeffd;
+}
+#read_event_modal h1 {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+#read_event_modal p,
+#delete_event_modal .modal-content form p,
+#delete_event_modal .modal-content form b {
+  text-align: justify;
+  font-size: 1.5rem;
+}
+#read_event_modal .right-part {
+  width: 331px;
+  height: 100%;
+
+  background: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+#read_event_modal .right-part img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+#read_event_modal .left-part {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 20px 20px 0;
+}
+
+#read_event_modal .left-part li {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
