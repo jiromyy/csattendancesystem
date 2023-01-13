@@ -461,8 +461,7 @@ color: #FFFFFF;
     color: #B0B0B0;
     padding-left: 20px;
     width: 400px;
-    letter-spacing: 1px;
-    text-align: justify;
+    text-align: left;
 }
 .lower-section .eventDescription h4{
     margin-bottom: 0;
