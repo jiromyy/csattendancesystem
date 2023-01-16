@@ -14,6 +14,7 @@
         include("php/auth.php");
         $user = $_SESSION['user'];
         include("php/check_session.php");
+
         $type = $user === "account_manager" ? "Account Manager" : 
             ($user === "org_admin" ? "Organization Admin": 
                 ($user === "attendance_checker" ? "Attendance Checker":
@@ -21,7 +22,6 @@
                     )
                 )
             ); 
-        
         ?>
 
         <!-- nav-dashboard-container start --->
@@ -38,26 +38,26 @@
                             <i class="fa-solid fa-chart-column"></i>
                             <a href="#"><span>Dashboard</span></a>
                         </li>
-                        <li>
+                        <li <?php if ($user != "attendance_checker" && $user != "super_admin") echo 'style=display:none'?>>
                             <i class="fa-solid fa-pencil"></i>
                             <a href="#"><span>Get Attendance</span></a>
                         </li>
                         <li>
                             <span>Manage</span>
                         </li>
-                        <li>
+                        <li <?php if ($user != "account_manager" && $user != "super_admin") echo 'style=display:none'?>>
                             <i class="fa-solid fa-wallet"></i>
-                            <a href="#"><span>Accounts</span></a>
+                            <a href="manage-accounts.php"><span>Accounts</span></a>
                         </li>
-                        <li>
+                        <li <?php if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
                             <i class="fa-regular fa-note-sticky"></i>
                             <a href="#"><span>Events</span></a>
                         </li>
-                        <li>
+                        <li <?php if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
                             <i class="fa-solid fa-users"></i>
                             <a href="#"><span>Attendee</span></a>
                         </li>
-                        <li>
+                        <li <?php if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
                             <i class="fa-regular fa-flag"></i>
                             <a href="#"><span>Attendance</span></a>
                         </li>

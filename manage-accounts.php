@@ -8,58 +8,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Accounts</title>
 
-  <link rel="stylesheet" href="../css/manage-account.css" />
+  <link rel="stylesheet" href="css/manage-account.css" />
 
   <!-- icon -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <script src="https://kit.fontawesome.com/b8e4159bd9.js" crossorigin="anonymous"></script>
 </head>
 
-
-
 <body>
+
+  <?php  
+    include("php/auth.php");
+    include("php/get_accounts.php");
+    $user = $_SESSION['user'];
+    include("php/check_session.php");
+
+    $type = $user === "account_manager" ? "Account Manager" : 
+      ($user === "org_admin" ? "Organization Admin": 
+        ($user === "attendance_checker" ? "Attendance Checker":
+          ($user === "super_admin" ? "Super Admin": "Else"
+          )
+        )
+      ); 
+    ?>
+    
   <div class="nav-events-container">
     <nav class="nav-sidebar">
       <div class="nav-logo">
-        <img src="../assets/university-logo.png" alt="university logo">
-        <span>Attendance Portal</span>
+          <img src="assets/university-logo.png" alt="university logo">
+          <span>Attendance Portal</span>
       </div>
       <div class="nav-manage-links">
-        <ul>
-          <li>
-            <i class="fa-solid fa-chart-column"></i>
-            <a href="#"><span>Dashboard</span></a>
-          </li>
-          <li>
-            <i class="fa-solid fa-pencil"></i>
-            <a href="#"><span>Get Attendance</span></a>
-          </li>
-          <li>
-            <span>Manage</span>
-          </li>
-          <li>
-            <i class="fa-solid fa-wallet"></i>
-            <a href="#"><span>Accounts</span></a>
-          </li>
-          <li>
-            <i class="fa-regular fa-note-sticky"></i>
-            <a href="#"><span>Events</span></a>
-          </li>
-          <li>
-            <i class="fa-solid fa-users"></i>
-            <a href="#"><span>Attendee</span></a>
-          </li>
-          <li>
-            <i class="fa-regular fa-flag"></i>
-            <a href="#"><span>Attendance</span></a>
-          </li>
-          <li>
-            <i class="fa-solid fa-arrow-right-from-bracket"></i>
-            <button href="#"><span>Log Out</span></button>
-          </li>
-        </ul>
+          <ul>
+              <li>
+                  <i class="fa-solid fa-chart-column"></i>
+                  <a href="#"><span>Dashboard</span></a>
+              </li>
+              <li <?php if ($user != "attendance_checker" && $user != "super_admin") echo 'style=display:none'?>>
+                  <i class="fa-solid fa-pencil"></i>
+                  <a href="#"><span>Get Attendance</span></a>
+              </li>
+              <li>
+                  <span>Manage</span>
+              </li>
+              <li <?php if ($user != "account_manager" && $user != "super_admin") echo 'style=display:none'?>>
+                  <i class="fa-solid fa-wallet"></i>
+                  <a href="manage-accounts.php"><span>Accounts</span></a>
+              </li>
+              <li <?php if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
+                  <i class="fa-regular fa-note-sticky"></i>
+                  <a href="#"><span>Events</span></a>
+              </li>
+              <li <?php if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
+                  <i class="fa-solid fa-users"></i>
+                  <a href="#"><span>Attendee</span></a>
+              </li>
+              <li <?php if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
+                  <i class="fa-regular fa-flag"></i>
+                  <a href="#"><span>Attendance</span></a>
+              </li>
+              <li>
+                  <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                  <form action="#" method="POST">
+                      <button name="logout" type="submit">
+                          <span>Logout</span>
+                      </button>
+                  </form>
+              </li>
+          </ul>
       </div>
-    </nav>
+  </nav>
     <main class="events">
       <div class="events-header">
         <span>Accounts</span>
@@ -87,8 +105,6 @@
         </div>
 
         <table>
-          <thead>
-          </thead>
           <tbody>
             <tr class="table-head">
               <th>User Name</th>
@@ -98,11 +114,31 @@
               <th class="btn-group-sm" style="width: 148px;">
               </th>
             </tr>
+            <?php if(mysqli_num_rows($result)==0){ ?>
+              <tr>  
+                  <td colspan='5'><h2>-- No Records --</h2></td>
+              </tr>  
+                  <?php } ?>
+
+            <?php    
+              while($row = mysqli_fetch_assoc($result)){
+              $username = $row['username'];
+              $type = $row['account_type'];
+              $org = $row['org_name'];
+
+              $typetext = $type === "account_manager" ? "Account Manager" : 
+                ($type === "org_admin" ? "Organization Admin": 
+                  ($type === "attendance_checker" ? "Attendance Checker":
+                    ($type === "super_admin" ? "Super Admin": "Else"
+                    )
+                  )
+                ); 
+            ?>
 
             <tr class="row">
-              <td class="event-name">iamlanie</td>
-              <td class="date">Organization Admin</td>
-              <td class="host">Computer Science Society</td>
+              <td class="event-name"><?php echo $username?></td>
+              <td class="date"><?php echo $typetext?></td>
+              <td class="host"><?php echo $org?></td>
               <td class="status">10 hours ago </td>
               <td class="btn-group-sm">
                 <a class=""><span class="material-symbols-outlined"> visibility </span></a>
@@ -114,136 +150,7 @@
                   </span></a>
               </td>
             </tr>
-            </tr>
-
-            <tr class="row">
-              <td class="event-name">emman_most_handsome</td>
-              <td class="date">Attendance Checker</td>
-              <td class="host">Computer Science Society</td>
-              <td class="status">10 hours ago </td>
-              <td class="btn-group-sm">
-                <a class=""><span class="material-symbols-outlined"> visibility </span></a>
-                <a class=""><span class="material-symbols-outlined">
-                    edit
-                  </span></a>
-                <a class=""><span class="material-symbols-outlined">
-                    delete
-                  </span></a>
-              </td>
-            </tr>
-            </tr>
-
-            <tr class="row">
-              <td class="event-name">g.antido</td>
-              <td class="date">Organization Admin</td>
-              <td class="host">Computer Science Society</td>
-              <td class="status">10 hours ago </td>
-              <td class="btn-group-sm">
-                <a class=""><span class="material-symbols-outlined"> visibility </span></a>
-                <a class=""><span class="material-symbols-outlined">
-                    edit
-                  </span></a>
-                <a class=""><span class="material-symbols-outlined">
-                    delete
-                  </span></a>
-              </td>
-            </tr>
-
-            <tr class="row">
-              <td class="event-name">iamjoyce</td>
-              <td class="date">Attendance Checker</td>
-              <td class="host">Computer Science Society</td>
-              <td class="status">10 hours ago </td>
-              <td class="btn-group-sm">
-                <a class=""><span class="material-symbols-outlined"> visibility </span></a>
-                <a class=""><span class="material-symbols-outlined">
-                    edit
-                  </span></a>
-                <a class=""><span class="material-symbols-outlined">
-                    delete
-                  </span></a>
-              </td>
-            </tr>
-
-            <tr class="row">
-              <td class="event-name">kingjc</td>
-              <td class="date">Organization Admin</td>
-              <td class="host">Computer Science Society</td>
-              <td class="status">10 hours ago </td>
-              <td class="btn-group-sm">
-                <a class=""><span class="material-symbols-outlined"> visibility </span></a>
-                <a class=""><span class="material-symbols-outlined">
-                    edit
-                  </span></a>
-                <a class=""><span class="material-symbols-outlined">
-                    delete
-                  </span></a>
-              </td>
-            </tr>
-
-            <tr class="row">
-              <td class="event-name">jerome.m</td>
-              <td class="date">Attendance Checker</td>
-              <td class="host">Computer Science Society</td>
-              <td class="status">10 hours ago </td>
-              <td class="btn-group-sm">
-                <a class=""><span class="material-symbols-outlined"> visibility </span></a>
-                <a class=""><span class="material-symbols-outlined">
-                    edit
-                  </span></a>
-                <a class=""><span class="material-symbols-outlined">
-                    delete
-                  </span></a>
-              </td>
-            </tr>
-
-            <tr class="row">
-              <td class="event-name">iamzai</td>
-              <td class="date">Organization Admin</td>
-              <td class="host">Computer Science Society</td>
-              <td class="status">10 hours ago </td>
-              <td class="btn-group-sm">
-                <a class=""><span class="material-symbols-outlined"> visibility </span></a>
-                <a class=""><span class="material-symbols-outlined">
-                    edit
-                  </span></a>
-                <a class=""><span class="material-symbols-outlined">
-                    delete
-                  </span></a>
-              </td>
-            </tr>
-
-            <tr class="row">
-              <td class="event-name">mark_tagavillage</td>
-              <td class="date">Attendance Checker</td>
-              <td class="host">Computer Science Society</td>
-              <td class="status">10 hours ago </td>
-              <td class="btn-group-sm">
-                <a class=""><span class="material-symbols-outlined"> visibility </span></a>
-                <a class=""><span class="material-symbols-outlined">
-                    edit
-                  </span></a>
-                <a class=""><span class="material-symbols-outlined">
-                    delete
-                  </span></a>
-              </td>
-            </tr>
-
-            <tr class="row">
-              <td class="event-name">r.martal</td>
-              <td class="date">Organization Admin</td>
-              <td class="host">Computer Science Society</td>
-              <td class="status">10 hours ago </td>
-              <td class="btn-group-sm">
-                <a class=""><span class="material-symbols-outlined"> visibility </span></a>
-                <a class=""><span class="material-symbols-outlined">
-                    edit
-                  </span></a>
-                <a class=""><span class="material-symbols-outlined">
-                    delete
-                  </span></a>
-              </td>
-            </tr>
+            <?php } ?>
           </tbody>
 
         </table>
