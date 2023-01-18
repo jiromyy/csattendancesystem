@@ -65,7 +65,7 @@
             </nav>
             <main class="dashboard">
                 <div class="dashboard-header">
-                    <span>Dashboard</span>
+                    <span>Attendance Report</span>
                     <div class="user">
                         <div class="user-profile">
                             <img src="assets/user.jpg" alt="Emman Gwapo">
