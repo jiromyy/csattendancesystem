@@ -492,24 +492,27 @@ div.nav-dashboard-container > main.dashboard > div.dashboard-main {
     position: absolute;
     bottom: 0;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(13, 1fr);
+    grid-template-columns: repeat(4, 18.75rem) 8.5rem repeat(4, 18.75rem) repeat(1, 1fr);
+    grid-template-rows: repeat(2, 7.75rem) 3rem 5rem repeat(12, 1fr);
     grid-gap: 1rem;
     /* 10 x 7 */
     grid-template-areas: 
-    "banner banner banner calendar calendar"
-    "banner banner banner calendar calendar"
-    "overview . . calendar calendar"
-    "dropdown dropdown dropdown calendar calendar"
-    "graph-1 graph-1 graph-2 calendar calendar"
-    "graph-1 graph-1 graph-2 . . " 
-    "graph-1 graph-1 graph-3 event event"
-    "graph-1 graph-1 graph-3 event event"
-    "graph-1 graph-1 graph-4 event event"
-    "graph-1 graph-1 graph-4 event event"
-    "data data data event event"
-    "data data data . ."
-    "data data data . ."
+    ". banner banner banner banner . calendar calendar"
+    ". banner banner banner banner . calendar calendar"
+    ". overview . . . . calendar calendar"
+    ". dropdown dropdown dropdown dropdown . calendar calendar"
+    ". graph-1 graph-1 graph-2 graph-2 . calendar calendar"
+    ". graph-1 graph-1 graph-2 graph-2 . calendar calendar" 
+    ". graph-1 graph-1 graph-3 graph-3 . event event"
+    ". graph-1 graph-1 graph-3 graph-3 . event event"
+    ". graph-1 graph-1 graph-4 graph-4 . event event"
+    ". graph-1 graph-1 graph-4 graph-4 . event event"
+    ". data data data data . event event"
+    ". data data data data . event event"
+    ". data data data data . event event"
+    ". data data data data . . ."
+    ". data data data data . . ."
+    ". data data data data . . ."
     ;
     padding: 2rem;
 }
