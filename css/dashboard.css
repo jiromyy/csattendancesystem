@@ -502,13 +502,13 @@ div.nav-dashboard-container > main.dashboard > div.dashboard-main {
     "overview . . calendar calendar"
     "dropdown dropdown dropdown calendar calendar"
     "graph-1 graph-1 graph-2 calendar calendar"
-    "graph-1 graph-1 graph-2 . . " 
+    "graph-1 graph-1 graph-2 calendar calendar" 
     "graph-1 graph-1 graph-3 event event"
     "graph-1 graph-1 graph-3 event event"
     "graph-1 graph-1 graph-4 event event"
     "graph-1 graph-1 graph-4 event event"
     "data data data event event"
-    "data data data . ."
+    "data data data event event"
     "data data data . ."
     ;
     padding: 2rem;
