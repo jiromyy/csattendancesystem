@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Attendance Reports</title>
     <link rel="stylesheet" href="css/attendance_events.css">
     <script src="https://kit.fontawesome.com/b8e4159bd9.js" crossorigin="anonymous"></script>
 </head>
@@ -14,7 +14,7 @@
         <div class="nav-dashboard-container">
             <nav class="nav-sidebar">
                 <div class="nav-logo">
-                    <img src="assets/university-logo.png" alt="university logo">
+                    <img src="assets/organization-logo.png" alt="organization logo">
                     <span>Attendance Portal</span>
                 </div>
                 <div class="nav-manage-links">
@@ -46,14 +46,14 @@
                             <i class="fa-regular fa-flag"></i>
                             <a href="#"><span>Attendance</span></a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <i class="fa-solid fa-arrow-right-from-bracket"></i>
                             <form action="#" method="POST">
                                 <button name="logout" type="submit">
                                     <span>Logout</span>
                                 </button>
                             </form>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </nav>
