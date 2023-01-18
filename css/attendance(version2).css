@@ -53,10 +53,10 @@
 
 /* global adjustment */
 
-span, i, input{
+div.nav-logo > span, i, input{
     font-size: 1.6rem;
-    font-weight: 400;
-    color: var(--black-all);
+    font-weight: 100;
+    color: var(--white-all);
 }
 
 img {
@@ -300,11 +300,72 @@ div.content-area{
 } 
 
 /* start of section-1 */
-div.content-area > div.secton-1 > span > p{
-    padding: 100px;
-    color: var(--grey-text);
+div.content-area > div.section-1{
+    margin-bottom: 1rem;
 }
-/* end of sectoin-1 */
+div.content-area > div.section-1 > span{
+    font-size: 2.1rem;
+    color: var(--grey-base);
+}
+/* end of section-1 */
+
+/* start of section-2 */
+div.content-area > div.section-2{
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.content-area > div.section-2 > div.sub-section > input{
+    padding: 0.8rem;
+    padding-left: 1.5rem;
+    font-size: 1.3rem;
+    border: 0.1rem solid var(--grey-base);
+    border-radius: 0.7rem;
+    width: 30rem;
+    color: var(--gray-base);
+}
+
+div.content-area > div.section-2 > div.sub-section > input:focus{
+    border: 0.2rem solid var(--green-hover);
+    outline: none !important;
+}
+
+div.content-area > div.section-2 > div.sub-section > button{
+    cursor: pointer;
+    height: 3.7rem;
+    margin-left: 1rem;
+    width: 10rem;
+    border-radius: 0.7rem;
+    border: none;
+    background-color: var(--green-hover);
+    color: var(--white-all);
+    font-size: 1.3rem;
+}
+
+div.content-area > div.section-2 > select{
+    cursor: pointer;
+    height: 3.7rem;
+    width: 7rem;
+    font-size: 1.3rem;
+    border-radius: 0.7rem;
+    color: var(--grey-text);
+    border: 0.1rem solid var(--grey-base);
+    background-color: var(--gray-text2);
+}
+
+div.content-area > div.section-2 > select:focus{
+    border: 0.2rem solid var(--green-hover);
+    outline: none !important;
+}
+
+div.content-area > div.section-2 > select > option{
+    font-size: 1.3rem;
+    border: 0.1rem solid var(--grey-base);
+}
+/* end of section-2 */
+
+
 
 /* end of Content Area */
 

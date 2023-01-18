@@ -73,15 +73,15 @@
                         <span>Events</span>
                     </div>
                     <div class="section-2">
-                        <input type="text" name="searchBox" id="searchBox">
-                        <button>Search <i class="fa-solid fa-magnifying-glass"></i></button>
-                        <div>
-                            <select name="sortEvents" id="sortEvents">
-                                <option selected disabled hidden>Sort</option>
-                                <option value="eventName">Event</option>
-                                <option value="date">Date</option>
-                            </select>
+                        <div class="sub-section">
+                            <input type="text" name="searchBox" id="searchBox">
+                            <button>Search &nbsp;&nbsp;<i class="fa-solid fa-magnifying-glass"></i></button>
                         </div>
+                        <select name="sortEvents" id="sortEvents">
+                            <option selected disabled hidden>Sort</option>
+                            <option value="eventName">Event</option>
+                            <option value="date">Date</option>
+                        </select>
                     </div>
                 </div>
             </main>
