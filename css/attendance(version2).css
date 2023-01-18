@@ -59,6 +59,12 @@ div.nav-logo > span, i, input{
     color: var(--white-all);
 }
 
+div.nav-logo > span{
+    font-size: 1.6rem;
+    font-weight: 100;
+    color: var(--black-all);
+}
+
 img {
     width: 3.2rem;
     height: auto;
@@ -290,7 +296,6 @@ div.user-info > span:last-child {
 
 
 /* Start of Content Area */
-
 div.content-area{
     width: 100%;
     height: 100%;
@@ -303,7 +308,12 @@ div.content-area{
 div.content-area > div.section-1{
     margin-bottom: 1rem;
 }
-div.content-area > div.section-1 > span{
+
+div.content-area > div.section-1 > a{
+    text-decoration: none;
+}
+
+div.content-area > div.section-1 > a > span{
     font-size: 2.1rem;
     color: var(--grey-base);
 }
@@ -314,6 +324,7 @@ div.content-area > div.section-2{
     margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
+    border-bottom: 1rem solid var(--gray-text2);
 }
 
 div.content-area > div.section-2 > div.sub-section > input{
@@ -323,7 +334,7 @@ div.content-area > div.section-2 > div.sub-section > input{
     border: 0.1rem solid var(--grey-base);
     border-radius: 0.7rem;
     width: 30rem;
-    color: var(--gray-base);
+    color: var(--gray-text);
 }
 
 div.content-area > div.section-2 > div.sub-section > input:focus{
@@ -341,6 +352,10 @@ div.content-area > div.section-2 > div.sub-section > button{
     background-color: var(--green-hover);
     color: var(--white-all);
     font-size: 1.3rem;
+}
+div.content-area > div.section-2 > div.sub-section > button:hover{
+    background-color: #14a137;
+    border-color: #14a137;
 }
 
 div.content-area > div.section-2 > select{
@@ -365,6 +380,90 @@ div.content-area > div.section-2 > select > option{
 }
 /* end of section-2 */
 
+/* section-3 */
+div.content-area > div.section-3{
+    padding: 2rem;
+    width: 100%;
+    height: 90%;
+    background-color: var(--white-all);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+div.content-area > div.section-3 > div.card-holder{
+    background-color: #f8f8f8;
+    width: 45rem;
+    height: 41rem;
+    border-radius: 0.5rem;
+}
+
+div.content-area > div.section-3 > div.card-holder:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+div.content-area > div.section-3 > div.card-holder > div.card-upper-section{
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    background-color: var(--green-hover);
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    padding-top: 6.5rem;
+}
+
+div.content-area > div.section-3 > div.card-holder > div.card-upper-section > span:first-child{
+    color: var(--white-all);
+    font-size: 1.6rem;
+    
+}
+
+div.content-area > div.section-3 > div.card-holder > div.card-upper-section > span:last-child{
+    color: var(--white-all);
+    font-size: 3.2rem;
+}
+
+div.content-area > div.section-3 > div.card-holder > div.card-bottom-section{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+div.card-holder > div.card-bottom-section > div.bottom-section-contents > div.span-titles{
+    color: var(--gray-text2);
+    font-size: 1rem;
+}
+
+div.card-holder > div.card-bottom-section > div.bottom-section-contents > div.sub-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.card-holder > div.card-bottom-section > div.bottom-section-contents > div.sub-section > div.progress{
+    display: flex;
+    flex-direction: column;
+}
+
+div.card-holder > div.card-bottom-section > div.bottom-section-contents > div.sub-section > div.progress > div.progress-bar{
+    background-color: var(--grey-base);
+    height: 0.7rem;
+    width: 18rem;
+    border-radius: 5rem;
+}
+
+div.card-holder > div.card-bottom-section > div.bottom-section-contents > div.sub-section > div.progress > div.progress-bar > div{
+    background-color: var(--green-hover);
+    height: 0.7rem;
+    width: 75%;
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+}
+
+div.card-holder > div.card-bottom-section > div.bottom-section-contents > div.sub-section > div.progress > div.progress-bar > span{
+    font-size:3.2rem;
+}
+/* end of section-3 */
 
 
 /* end of Content Area */

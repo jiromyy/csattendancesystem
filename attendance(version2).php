@@ -70,7 +70,7 @@
                 </div>
                 <div class="content-area">
                     <div class="section-1">
-                        <span>Events</span>
+                        <a href="#"><span>Events</span></a>
                     </div>
                     <div class="section-2">
                         <div class="sub-section">
@@ -82,6 +82,31 @@
                             <option value="eventName">Event</option>
                             <option value="date">Date</option>
                         </select>
+                    </div>
+                    <div class="section-3">
+                        <div class="card-holder">
+                            <div class="card-upper-section">
+                                <span>Host name here</span>
+                                <span>Event name here</span>
+                            </div>
+                            <div class="card-bottom-section">
+                                <div class="bottom-section-contents">
+                                    <div class="sub-section">
+                                        <span class="span-titles">Date here</span>
+                                        <div class="progress">
+                                            <div class="progress-bar">
+                                                <div></div>
+                                            </div>
+                                            <span>Ongoing</span>
+                                        </div>
+                                    </div>
+                                    <span class="span-titles">Description:</span>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consequatur doloribus, recusandae optio ex reiciendis qui officia necessitatibus vel delectus!</p>
+                                    <span class="span-titles">Fines: <p>10.00</p></span>
+                                </div>
+                                <button>View</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>
