@@ -80,6 +80,7 @@ html {
 body {
     width: inherit;
     height: inherit;
+    overflow-y: hidden;
 }
 
 /* start nav-dashboard-container */
