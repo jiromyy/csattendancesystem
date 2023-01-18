@@ -15,80 +15,10 @@
   <script src="https://kit.fontawesome.com/b8e4159bd9.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-
-  <?php  
-    include("php/auth.php");
-    include("php/get_accounts.php");
-    $user = $_SESSION['user'];
-    include("php/check_session.php");
-
-    $type = $user === "account_manager" ? "Account Manager" : 
-      ($user === "org_admin" ? "Organization Admin": 
-        ($user === "attendance_checker" ? "Attendance Checker":
-          ($user === "super_admin" ? "Super Admin": "Else"
-          )
-        )
-      ); 
-    ?>
-    
-  <div class="nav-events-container">
-    <nav class="nav-sidebar">
-      <div class="nav-logo">
-          <img src="assets/university-logo.png" alt="university logo">
-          <span>Attendance Portal</span>
-      </div>
-      <div class="nav-manage-links">
-          <ul>
-              <li>
-                  <i class="fa-solid fa-chart-column"></i>
-                  <a href="#"><span>Dashboard</span></a>
-              </li>
-              <li <?php if ($user != "attendance_checker" && $user != "super_admin") echo 'style=display:none'?>>
-                  <i class="fa-solid fa-pencil"></i>
-                  <a href="#"><span>Get Attendance</span></a>
-              </li>
-              <li>
-                  <span>Manage</span>
-              </li>
-              <li <?php if ($user != "account_manager" && $user != "super_admin") echo 'style=display:none'?>>
-                  <i class="fa-solid fa-wallet"></i>
-                  <a href="manage-accounts.php"><span>Accounts</span></a>
-              </li>
-              <li <?php if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
-                  <i class="fa-regular fa-note-sticky"></i>
-                  <a href="#"><span>Events</span></a>
-              </li>
-              <li <?php if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
-                  <i class="fa-solid fa-users"></i>
-                  <a href="#"><span>Attendee</span></a>
-              </li>
-              <li <?php if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
-                  <i class="fa-regular fa-flag"></i>
-                  <a href="#"><span>Attendance</span></a>
-              </li>
-              <li>
-                  <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                  <form action="#" method="POST">
-                      <button name="logout" type="submit">
-                          <span>Logout</span>
-                      </button>
-                  </form>
-              </li>
-          </ul>
-      </div>
-  </nav>
-    <main class="events">
-      <div class="events-header">
-        <span>Accounts</span>
-        <div class="user">
-          <img src="../assets/user.jpg" alt="Emman Gwapo">
-          <div class="user-info">
-            <span>Emman Adonay</span>
-            <span>Super User</span>
-          </div>
-        </div>
-      </div>
+      <?php
+        include("navbar.php");
+        include("php/get_accounts.php");
+      ?>
       <div class="events-main">
         <div class="search-navigate">
           <div class="left-search-navigate">
@@ -154,11 +84,7 @@
           </tbody>
 
         </table>
-
-
-
     </main>
-
 
     <!--start of create modal -->
     <!-- create account -->
@@ -196,15 +122,9 @@
       </div>
     </div>
     <!-- end of create modal -->
-
-
-
-
   </div>
-
-
-
-  <script src="../script/accounts.js"></script>
+  <script src="script/accounts.js"></script>
+  <script src="script/dashboard.js"></script>
 </body>
 
 </html>
