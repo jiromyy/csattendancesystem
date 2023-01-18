@@ -67,7 +67,7 @@
                         </a>
                     </li>
                     <li <?php if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
-                        <a href="attendance(version2).php">
+                        <a href="attendance_events.php">
                             <i class="fa-regular fa-flag"></i>
                             <span>Attendance</span>
                         </a>

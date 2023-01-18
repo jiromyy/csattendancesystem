@@ -4,12 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Attendance</title>
     <link rel="stylesheet" href="css/attendance_events.css">
     <script src="https://kit.fontawesome.com/b8e4159bd9.js" crossorigin="anonymous"></script>
 </head>
     <body>
+        <?php  
+        include("php/auth.php");
+        $user = $_SESSION['user'];
+        include("php/check_session.php");
+
+        $type = $user === "account_manager" ? "Account Manager" : 
+            ($user === "org_admin" ? "Organization Admin": 
+                ($user === "attendance_checker" ? "Attendance Checker":
+                    ($user === "super_admin" ? "Super Admin": "Else"
+                    )
+                )
+            ); 
+        ?>
         <!-- nav-dashboard-container start --->
+
 
         <div class="nav-dashboard-container">
             <nav class="nav-sidebar">
@@ -51,12 +65,36 @@
             </nav>
             <main class="dashboard">
                 <div class="dashboard-header">
-                    <span>Attendance Report</span>
+                    <span>Dashboard</span>
                     <div class="user">
-                        <img src="assets/user_profile.jpg" alt="Emman Gwapo">
+                        <div class="user-profile">
+                            <img src="assets/user.jpg" alt="Emman Gwapo">
+                            <div class="dropdown">
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <ul class="menu">
+                                    <li>
+                                        <a href="#">
+                                            <span>option 1</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>option 2</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <form action="#" method="POST">
+                                            <button name="logout" type="submit">
+                                                <span>Logout</span>
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                         <div class="user-info">
-                            <span>Richdale Martal</span>
-                            <span>Org Admin</span>
+                            <span>Emman Adonay</span>
+                            <span><?php echo $type ?></span>
                         </div>
                     </div>
                 </div>
@@ -103,5 +141,7 @@
                 </div>
             </main>
         </div>
+
+        <script src="script/attendance_events.js"></script>
     </body>
 </html>
