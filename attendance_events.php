@@ -14,7 +14,7 @@
         <div class="nav-dashboard-container">
             <nav class="nav-sidebar">
                 <div class="nav-logo">
-                    <img src="assets/university-logo.png" alt="university logo">
+                    <img src="assets/organization-logo.png" alt="organization logo">
                     <span>Attendance Portal</span>
                 </div>
                 <div class="nav-manage-links">
