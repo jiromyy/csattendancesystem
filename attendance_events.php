@@ -9,95 +9,9 @@
     <script src="https://kit.fontawesome.com/b8e4159bd9.js" crossorigin="anonymous"></script>
 </head>
     <body>
-        <?php  
-        include("php/auth.php");
-        $user = $_SESSION['user'];
-        include("php/check_session.php");
-
-        $type = $user === "account_manager" ? "Account Manager" : 
-            ($user === "org_admin" ? "Organization Admin": 
-                ($user === "attendance_checker" ? "Attendance Checker":
-                    ($user === "super_admin" ? "Super Admin": "Else"
-                    )
-                )
-            ); 
-        ?>
-        <!-- nav-dashboard-container start --->
-
-
-        <div class="nav-dashboard-container">
-            <nav class="nav-sidebar">
-                <div class="nav-logo">
-                    <img src="assets/organization-logo.png" alt="organization logo">
-                    <span>Attendance Portal</span>
-                </div>
-                <div class="nav-manage-links">
-                    <ul>
-                        <li>
-                            <i class="fa-solid fa-chart-column"></i>
-                            <a href="#"><span>Dashboard</span></a>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-pencil"></i>
-                            <a href="#"><span>Get Attendance</span></a>
-                        </li>
-                        <li>
-                            <span>Manage</span>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-wallet"></i>
-                            <a href="manage-accounts.php"><span>Accounts</span></a>
-                        </li>
-                        <li>
-                            <i class="fa-regular fa-note-sticky"></i>
-                            <a href="#"><span>Events</span></a>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-users"></i>
-                            <a href="#"><span>Attendee</span></a>
-                        </li>
-                        <li>
-                            <i class="fa-regular fa-flag"></i>
-                            <a href="#"><span>Attendance</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <main class="dashboard">
-                <div class="dashboard-header">
-                    <span>Dashboard</span>
-                    <div class="user">
-                        <div class="user-profile">
-                            <img src="assets/user.jpg" alt="Emman Gwapo">
-                            <div class="dropdown">
-                                <i class="fa-solid fa-chevron-down"></i>
-                                <ul class="menu">
-                                    <li>
-                                        <a href="#">
-                                            <span>option 1</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span>option 2</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <form action="#" method="POST">
-                                            <button name="logout" type="submit">
-                                                <span>Logout</span>
-                                            </button>
-                                        </form>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="user-info">
-                            <span>Emman Adonay</span>
-                            <span><?php echo $type ?></span>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                    include("navbar.php");
+                ?>
                 <div class="content-area">
                     <div class="section-1">
                         <a href="#"><span>Events</span></a>
