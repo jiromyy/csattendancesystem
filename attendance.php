@@ -5,12 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/attendance.css">
+    <script src="https://kit.fontawesome.com/b8e4159bd9.js" crossorigin="anonymous"></script>
     <title>Attendance</title>
 </head>
 <body>
     <div class="attendance-page">
-        <div class="Nav-Panel">
-        </div>
+    <nav class="nav-sidebar">
+                <div class="nav-logo">
+                    <img src="assets/university-logo.png" alt="university logo">
+                    <span>Attendance Portal</span>
+                </div>
+                <div class="nav-manage-links">
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-chart-column"></i>
+                            <a href="#"><span>Dashboard</span></a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-pencil"></i>
+                            <a href="#"><span>Get Attendance</span></a>
+                        </li>
+                        <li>
+                            <span>Manage</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-wallet"></i>
+                            <a href="manage-accounts.php"><span>Accounts</span></a>
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-note-sticky"></i>
+                            <a href="#"><span>Events</span></a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-users"></i>
+                            <a href="#"><span>Attendee</span></a>
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-flag"></i>
+                            <a href="#"><span>Attendance</span></a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <form action="#" method="POST">
+                                <button name="logout" type="submit">
+                                    <span>Logout</span>
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         <div class="Content-Area">
             <div class="section-1">
                 <h1>Attendance Report</h1>
