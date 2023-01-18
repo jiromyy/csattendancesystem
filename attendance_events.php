@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="css/attendance(version2).css">
+    <link rel="stylesheet" href="css/attendance_events.css">
     <script src="https://kit.fontawesome.com/b8e4159bd9.js" crossorigin="anonymous"></script>
 </head>
     <body>
@@ -92,7 +92,7 @@
                             <div class="card-bottom-section">
                                 <div class="bottom-section-contents">
                                     <div class="sub-section">
-                                        <span class="span-titles">Date here</span>
+                                        <span>Date here</span>
                                         <div class="progress">
                                             <div class="progress-bar">
                                                 <div></div>

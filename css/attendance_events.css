@@ -429,20 +429,29 @@ div.content-area > div.section-3 > div.card-holder > div.card-bottom-section{
     padding: 2rem;
 }
 
-div.card-holder > div.card-bottom-section > div.bottom-section-contents > div.span-titles{
-    color: var(--gray-text2);
-    font-size: 1rem;
-}
-
 div.card-holder > div.card-bottom-section > div.bottom-section-contents > div.sub-section{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+div.card-holder > div.card-bottom-section > div.bottom-section-contents > div.sub-section > span{
+    color: var(--gray-text2);
+    font-size: 1.4rem;
+    font-weight: 500;
 }
 
 div.card-holder > div.card-bottom-section > div.bottom-section-contents > div.sub-section > div.progress{
     display: flex;
     flex-direction: column;
+}
+
+div.card-holder > div.card-bottom-section > div.bottom-section-contents > div.sub-section > div.progress > span{
+    color: var(--gray-text2);
+    font-size: 1rem;
+    align-self: flex-end;
 }
 
 div.card-holder > div.card-bottom-section > div.bottom-section-contents > div.sub-section > div.progress > div.progress-bar{
@@ -463,6 +472,38 @@ div.card-holder > div.card-bottom-section > div.bottom-section-contents > div.su
 div.card-holder > div.card-bottom-section > div.bottom-section-contents > div.sub-section > div.progress > div.progress-bar > span{
     font-size:3.2rem;
 }
+
+div.card-holder > div.card-bottom-section > div.bottom-section-contents > span.span-titles{
+    color: var(--gray-text2);
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: flex;
+}
+
+div.card-holder > div.card-bottom-section > div.bottom-section-contents > span.span-titles > p, div.card-holder > div.card-bottom-section > div.bottom-section-contents > p{
+    font-size: 1.3rem;
+    text-align: justify;
+    text-indent: 3rem;
+    margin-bottom: 2rem;
+}
+
+div.card-holder > div.card-bottom-section > button{
+    cursor: pointer;
+    height: 3.7rem;
+    margin-left: 1rem;
+    width: 10rem;
+    border-radius: 0.7rem;
+    border: none;
+    background-color: var(--green-hover);
+    color: var(--white-all);
+    font-size: 1.3rem;
+    align-self: flex-end;
+}
+div.card-holder > div.card-bottom-section > button:hover{
+    background-color: #14a137;
+    border-color: #14a137;
+}
+
 /* end of section-3 */
 
 
