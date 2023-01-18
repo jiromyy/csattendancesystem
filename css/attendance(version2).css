@@ -286,3 +286,25 @@ div.user-info > span:last-child {
 }
 
 /* end header */
+
+
+
+/* Start of Content Area */
+
+div.content-area{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+} 
+
+/* start of section-1 */
+div.content-area > div.secton-1 > span > p{
+    padding: 100px;
+    color: var(--grey-text);
+}
+/* end of sectoin-1 */
+
+/* end of Content Area */
+
