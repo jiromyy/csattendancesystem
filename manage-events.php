@@ -12,116 +12,11 @@
   <script src="https://kit.fontawesome.com/b8e4159bd9.js" crossorigin="anonymous"></script>
   <!-- icons -->
 </head>
+ 
+  <?php
+    include("navbar.php");
+  ?>
 
-<?php
-
-/* START OF CREATE SCRIPT*/
-
-if (isset($_POST['create_event'])) {
-  // $event_name = mysqli_real_escape_string($connection, trim($_POST['event_name']));
-  // $host = mysqli_real_escape_string($connection, trim($_POST['host']));
-  // $startDate = mysqli_real_escape_string($connection, trim($_POST['startDate']));
-  // $start_time = mysqli_real_escape_string($connection, trim($_POST['start_time']));
-  // $end_time = mysqli_real_escape_string($connection, trim($_POST['end_time']));
-  // $event_desc = mysqli_real_escape_string($connection, trim($_POST['event_desc']));
-  // $fines = mysqli_real_escape_string($connection, trim($_POST['fines']));
-  // $sessionses = mysqli_real_escape_string($connection, trim($_POST['session']));
-  // $org_admin_id = mysqli_real_escape_string($connection, trim($_POST['org_admin_id']));
-
-  // $sql = "INSERT INTO events (event_name, host, startDate,start_time,end_time,event_desc, fines,sessionses, org_admin_id) VALUES ('$event_name', '$host', '$startDate', '$start_time', '$end_time', '$event_desc','$fines', '$sessionses', '$org_admin_id')";
-
-  // $result =  $connection->query($sql);
-
-  // if ($result) {
-  echo '<script>
-    alert("Event Added Successfully");
-    </script>';
-  // }
-  header("Refresh:0");
-}
-
-if (isset($_POST['edit_event'])) {
-  echo '<script>
-  alert("Event Edited Successfully");
-  </script>';
-  // }
-  header("Refresh:0");
-}
-if (isset($_POST['delete_event'])) {
-  echo '<script>
-  alert("Event deleted Successfully");
-  </script>';
-  // }
-  header("Refresh:0");
-}
-
-/* END OF CREATE SCRIPT*/
-?>
-
-
-<body>
-
-
-  <div class="nav-events-container">
-    <!-- start of sidebar -->
-    <nav class="nav-sidebar">
-      <div class="nav-logo">
-        <img src="assets/university-logo.png" alt="university logo">
-        <span>Attendance Portal</span>
-      </div>
-      <div class="nav-manage-links">
-        <ul>
-          <li>
-            <i class="fa-solid fa-chart-column"></i>
-            <a href="#"><span>Dashboard</span></a>
-          </li>
-          <li>
-            <i class="fa-solid fa-pencil"></i>
-            <a href="#"><span>Get Attendance</span></a>
-          </li>
-          <li>
-            <span>Manage</span>
-          </li>
-          <li>
-            <i class="fa-solid fa-wallet"></i>
-            <a href="#"><span>Accounts</span></a>
-          </li>
-          <li>
-            <i class="fa-regular fa-note-sticky"></i>
-            <a href="#"><span>Events</span></a>
-          </li>
-          <li>
-            <i class="fa-solid fa-users"></i>
-            <a href="#"><span>Attendee</span></a>
-          </li>
-          <li>
-            <i class="fa-regular fa-flag"></i>
-            <a href="#"><span>Attendance</span></a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <i class="fa-solid fa-arrow-right-from-bracket"></i>
-            <button href="#"><span>Log Out</span></button>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <!-- end of sidebar -->
-
-    <!-- start of main component including header -->
-    <main class="events">
-      <div class="events-header">
-        <span>Events</span>
-        <div class="user">
-          <img src="assets/user.jpg" alt="Emman Gwapo">
-          <div class="user-info">
-            <span>Emman Adonay</span>
-            <span>Super User</span>
-          </div>
-        </div>
-      </div>
       <div class="events-main">
         <div class="search-navigate">
           <div class="left-search-navigate">
@@ -166,12 +61,7 @@ if (isset($_POST['delete_event'])) {
                   </span></a>
               </td>
             </tr>
-
-
-
-
           </tbody>
-
         </table>
     </main>
     <!-- end of main component including header -->
