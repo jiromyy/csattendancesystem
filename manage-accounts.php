@@ -18,18 +18,18 @@
 <body>
 
   <?php  
-    include("php/auth.php");
-    include("php/get_accounts.php");
-    $user = $_SESSION['user'];
-    include("php/check_session.php");
+    // include("php/auth.php");
+    // include("php/get_accounts.php");
+    // $user = $_SESSION['user'];
+    // include("php/check_session.php");
 
-    $type = $user === "account_manager" ? "Account Manager" : 
-      ($user === "org_admin" ? "Organization Admin": 
-        ($user === "attendance_checker" ? "Attendance Checker":
-          ($user === "super_admin" ? "Super Admin": "Else"
-          )
-        )
-      ); 
+    // $type = $user === "account_manager" ? "Account Manager" : 
+    //   ($user === "org_admin" ? "Organization Admin": 
+    //     ($user === "attendance_checker" ? "Attendance Checker":
+    //       ($user === "super_admin" ? "Super Admin": "Else"
+    //       )
+    //     )
+    //   ); 
     ?>
     
   <div class="nav-events-container">
@@ -44,26 +44,26 @@
                   <i class="fa-solid fa-chart-column"></i>
                   <a href="#"><span>Dashboard</span></a>
               </li>
-              <li <?php if ($user != "attendance_checker" && $user != "super_admin") echo 'style=display:none'?>>
+              <li <?php // if ($user != "attendance_checker" && $user != "super_admin") echo 'style=display:none'?>>
                   <i class="fa-solid fa-pencil"></i>
                   <a href="#"><span>Get Attendance</span></a>
               </li>
               <li>
                   <span>Manage</span>
               </li>
-              <li <?php if ($user != "account_manager" && $user != "super_admin") echo 'style=display:none'?>>
+              <li <?php // if ($user != "account_manager" && $user != "super_admin") echo 'style=display:none'?>>
                   <i class="fa-solid fa-wallet"></i>
                   <a href="manage-accounts.php"><span>Accounts</span></a>
               </li>
-              <li <?php if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
+              <li <?php // if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
                   <i class="fa-regular fa-note-sticky"></i>
                   <a href="#"><span>Events</span></a>
               </li>
-              <li <?php if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
+              <li <?php // if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
                   <i class="fa-solid fa-users"></i>
                   <a href="#"><span>Attendee</span></a>
               </li>
-              <li <?php if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
+              <li <?php // if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
                   <i class="fa-regular fa-flag"></i>
                   <a href="#"><span>Attendance</span></a>
               </li>
@@ -114,25 +114,25 @@
               <th class="btn-group-sm" style="width: 148px;">
               </th>
             </tr>
-            <?php if(mysqli_num_rows($result)==0){ ?>
+            <?php // if(mysqli_num_rows($result)==0){ ?>
               <tr>  
                   <td colspan='5'><h2>-- No Records --</h2></td>
               </tr>  
-                  <?php } ?>
+                  <?php  ?>
 
             <?php    
-              while($row = mysqli_fetch_assoc($result)){
-              $username = $row['username'];
-              $type = $row['account_type'];
-              $org = $row['org_name'];
+              // while($row = mysqli_fetch_assoc($result)){
+              // $username = $row['username'];
+              // $type = $row['account_type'];
+              // $org = $row['org_name'];
 
-              $typetext = $type === "account_manager" ? "Account Manager" : 
-                ($type === "org_admin" ? "Organization Admin": 
-                  ($type === "attendance_checker" ? "Attendance Checker":
-                    ($type === "super_admin" ? "Super Admin": "Else"
-                    )
-                  )
-                ); 
+              // $typetext = $type === "account_manager" ? "Account Manager" : 
+              //   ($type === "org_admin" ? "Organization Admin": 
+              //     ($type === "attendance_checker" ? "Attendance Checker":
+              //       ($type === "super_admin" ? "Super Admin": "Else"
+              //       )
+              //     )
+              //   ); 
             ?>
 
             <tr class="row">
@@ -150,7 +150,7 @@
                   </span></a>
               </td>
             </tr>
-            <?php } ?>
+            <?php  ?>
           </tbody>
 
         </table>
