@@ -11,17 +11,17 @@
     <body>
 
         <?php  
-        // include("php/auth.php");
-        // $user = $_SESSION['user'];
-        // include("php/check_session.php");
+        include("php/auth.php");
+        $user = $_SESSION['user'];
+        include("php/check_session.php");
 
-        // $type = $user === "account_manager" ? "Account Manager" : 
-        //     ($user === "org_admin" ? "Organization Admin": 
-        //         ($user === "attendance_checker" ? "Attendance Checker":
-        //             ($user === "super_admin" ? "Super Admin": "Else"
-        //             )
-        //         )
-        //     ); 
+        $type = $user === "account_manager" ? "Account Manager" : 
+            ($user === "org_admin" ? "Organization Admin": 
+                ($user === "attendance_checker" ? "Attendance Checker":
+                    ($user === "super_admin" ? "Super Admin": "Else"
+                    )
+                )
+            ); 
         ?>
 
         <!-- nav-dashboard-container start --->
@@ -39,7 +39,7 @@
                             <span>Dashboard</span>
                         </a>
                     </li>
-                    <li  <?php // if ($user != "attendance_checker" && $user != "super_admin") echo 'style=display:none'?>>
+                    <li  <?php if ($user != "attendance_checker" && $user != "super_admin") echo 'style=display:none'?>>
                         <a href="#">
                             <i class="fa-solid fa-pencil"></i>
                             <span>Get Attendance</span>
@@ -48,25 +48,25 @@
                     <li>
                             <span>Manage</span>
                     </li>
-                    <li <?php // if ($user != "account_manager" && $user != "super_admin") echo 'style=display:none'?>>
+                    <li <?php if ($user != "account_manager" && $user != "super_admin") echo 'style=display:none'?>>
                         <a href="manage-accounts.php">
                             <i class="fa-solid fa-wallet"></i>
                             <span>Accounts</span>
                         </a>
                     </li>
-                    <li <?php // if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
+                    <li <?php if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
                         <a href="manage-events.php">
                             <i class="fa-regular fa-note-sticky"></i>
                             <span>Events</span>
                         </a>
                     </li>
-                    <li <?php // if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
+                    <li <?php if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
                         <a href="#">
                             <i class="fa-solid fa-users"></i>
                             <span>Attendee</span>
                         </a>
                     </li>
-                    <li <?php // if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
+                    <li <?php if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
                         <a href="attendance(version2).php">
                             <i class="fa-regular fa-flag"></i>
                             <span>Attendance</span>
@@ -105,8 +105,7 @@
                         </div>
                         <div class="user-info">
                             <span>Emman Adonay</span>
-                            <span>Super Admin</span>
-                            <!-- <span><?php echo $type ?></span> -->
+                            <span><?php echo $type ?></span>
                         </div>
                     </div>
                 </div>
