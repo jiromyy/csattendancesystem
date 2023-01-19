@@ -15,6 +15,7 @@
 
 <?php
 include("navbar.php");
+
 ?>
 
 <div class="content-area">
@@ -24,7 +25,7 @@ include("navbar.php");
     </div>
     <div class="right-search-navigate">
       <select name="sort" class="sort" id="sort">
-        <option value="name" selected>Sort</option>
+        <option value="" selected>Sort</option>
         <option value="name">Name</option>
         <option value="date">Date Created</option>
         <option value="status">Status</option>
@@ -45,8 +46,6 @@ include("navbar.php");
       </tr>
     </thead>
     <tbody>
-
-
       <tr class="row-body">
         <td class="event-name cell">Computer Science Day</td>
         <td class="date cell">February 15, 2023</td>
