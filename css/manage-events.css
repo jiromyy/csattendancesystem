@@ -282,6 +282,10 @@ tbody th {
   font-size: 1.5rem;
 }
 
+tbody td,
+thead th {
+  word-break: break-all;
+}
 tbody tr.row-body:hover {
   background: var(--grey-hover);
 }
