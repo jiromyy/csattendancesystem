@@ -11,14 +11,24 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://kit.fontawesome.com/b8e4159bd9.js" crossorigin="anonymous"></script>
     <!-- icons -->
+    <!-- style -->
+    <style>
+        #add_event_form select {
+            font-size: 16px;
+        }
+    </style>
 </head>
 
 <?php
-include("navbar.php");
 
-?>
+/* START OF CREATE SCRIPT*/
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "cs attendance system";
 
-<?php
+//creating connection
+$connection = new mysqli($servername, $username, $password, $dbname);
 
 if (isset($_POST['add_attendee'])) {
     // if the query was successful
@@ -52,52 +62,132 @@ if (isset($_POST['delete_event'])) {
 <body>
 
 
-
-    <div class="content-area">
-        <div class="search-navigate">
-            <div class="left-search-navigate">
-                <input type="text" class="search" placeholder="Search by name, host, organization admin..." />
+    <div class="nav-events-container">
+        <!-- start of sidebar -->
+        <nav class="nav-sidebar">
+            <div class="nav-logo">
+                <img src="assets/university-logo.png" alt="university logo">
+                <span>Attendance Portal</span>
             </div>
-            <div class="right-search-navigate">
-                <select name="sort" class="sort" id="sort">
-                    <option value="" selected>Sort</option>
-                    <option value="name">Name</option>
-                    <option value="date">Date Created</option>
-                    <option value="status">Status</option>
-                </select>
-                <button class="create-button" id="create_button" onclick="show_modal('add')">Create New</button>
+            <div class="nav-manage-links">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-chart-column"></i>
+                        <a href="#"><span>Dashboard</span></a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-pencil"></i>
+                        <a href="#"><span>Get Attendance</span></a>
+                    </li>
+                    <li>
+                        <span>Manage</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-wallet"></i>
+                        <a href="#"><span>Accounts</span></a>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-note-sticky"></i>
+                        <a href="#"><span>Events</span></a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-users"></i>
+                        <a href="#"><span>Attendee</span></a>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-flag"></i>
+                        <a href="#"><span>Attendance</span></a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <button href="#"><span>Log Out</span></button>
+                    </li>
+                </ul>
             </div>
-        </div>
+        </nav>
 
-        <table>
-            <thead>
-                <tr class="row-header">
-                    <th>Name</th>
-                    <th>Student Number</th>
-                    <th>Contact Number</th>
-                    <th>Total Fines</th>
-                    <th class="btn-group-sm" style="width: 148px;">
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="row-body">
-                    <td class=" cell">Mamuad, Jerome Marlo B</td>
-                    <td class=" cell">90-000001</td>
-                    <td class=" cell">09020233366</td>
-                    <td class=" cell">100.00 </td>
-                    <td class="btn-group-sm cell cell-long">
-                        <a class="crud-button view_button" id="read_button" onclick="show_modal('read')"><span class="material-symbols-outlined"> visibility </span></a>
-                        <a class="crud-button edit_button" id="edit_button" onclick="show_modal('edit')"><span class="material-symbols-outlined">
-                                edit
-                            </span></a>
-                        <a class="crud-button delete_button" id="delete_button" onclick="show_modal('delete')"><span class="material-symbols-outlined">
-                                delete
-                            </span></a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <!-- end of sidebar -->
+
+        <!-- start of main component including header -->
+        <main class="events">
+            <div class="events-header">
+                <span>Attendees</span>
+                <div class="user">
+                    <div class="user-profile">
+                        <img src="assets/user.jpg" alt="Emman Gwapo">
+                        <div class="dropdown">
+                            <i class="fa-solid fa-chevron-down"></i>
+                            <ul class="menu">
+                                <li>
+                                    <a href="#">
+                                        <span>option 1</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>option 2</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <form action="#" method="POST">
+                                        <button name="logout" type="submit">
+                                            <span>Logout</span>
+                                        </button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="user-info">
+                        <span>Emman Adonay</span>
+                        <span>Super Admin</span>
+                    </div>
+                </div>
+            </div>
+            <div class="events-main">
+                <div class="search-navigate">
+                    <div class="left-search-navigate">
+                        <input type="text" class="search" placeholder="Search by name, host, organization admin..." />
+                    </div>
+                    <div class="right-search-navigate">
+                        <button class="create-button" id="create_button" onclick="show_modal('add')">Add New Attendee</button>
+                    </div>
+                </div>
+
+                <table id="attendee-table">
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <tr class="table-head">
+                            <th>Name</th>
+                            <th>Student Number</th>
+                            <th>Year And Section</th>
+                            <th>Total Fines</th>
+                            <th class="btn-group-sm" style="width: 148px;">
+                            </th>
+                        </tr>
+
+                        <tr class="row">
+                            <td class="name">Last Name, First Name, Middle Name</td>
+                            <td class="studentNumber">90-000001</td>
+                            <td class="yearAndSection">3A</td>
+                            <td class="totalFines">200</td>
+                            <td class="btn-group-sm">
+                                <a class="view_button" id="read_button" onclick="show_modal('read')"><span class="material-symbols-outlined"> visibility </span></a>
+                                <a class="edit_button" id="edit_button" onclick="show_modal('edit')"><span class="material-symbols-outlined">
+                                        edit
+                                    </span></a>
+                                <a class="delete_button" id="delete_button" onclick="show_modal('delete')"><span class="material-symbols-outlined">
+                                        delete
+                                    </span></a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
         </main>
         <!-- end of main component including header -->
 
@@ -105,11 +195,11 @@ if (isset($_POST['delete_event'])) {
         <!--start of create modal -->
         <div id="add_event_modal" class="modal">
             <div class="modal-content">
-                <form action="" class="form add_event_form" id="add_event_form" method="post">
-                    <div class="title title-form-div">
+                <form action="" class="add_event_form" id="add_event_form" method="post">
+                    <div class="title title_event_form-div">
                         <p class="title_event_form">Add Attendee</p>
                     </div>
-                    <div class="input-container">
+                    <div class="input-div">
                         <div class="input-for-1">
                             <label for="first_name">First Name</label>
                             <input type="text" name="first_name" class="input first_name" value="" placeholder="Type here" required />
@@ -117,47 +207,56 @@ if (isset($_POST['delete_event'])) {
                     </div>
 
 
-                    <div class="input-container">
+                    <div class="input-div">
                         <div class="input-for-1">
                             <label for="middle_name">Middle Name</label>
                             <input type="text" name="middle_name" class="input middle_name" value="" placeholder="Type here" required />
                         </div>
                     </div>
-                    <div class="input-container">
+                    <div class="input-div">
                         <div class="input-for-1">
                             <label for="last_name">Last Name</label>
                             <input type="text" name="last_name" class="input event_name" value="" placeholder="Type here" required />
                         </div>
                     </div>
                     <input type="text" name="org_id" class="input first_name" value="1" placeholder="Type here" hidden />
-                    <div class="input-container">
+                    <div class="input-div">
                         <div class="input-for-1">
                             <label for="student_number">Student Number</label>
                             <input type="text" name="student_number" class="input student_number" value="" placeholder="Type here" required />
                         </div>
                     </div>
-                    <div class="input-container">
+                    <div class="input-div">
                         <div class="input-for-1">
                             <label for="contact_number">Contact Number</label>
                             <input type="number" name="contact_number" class="input contact_number" value="" placeholder="Type here" required />
                         </div>
                     </div>
-                    <div class="input-container college">
+                    <div class="input-div college">
                         <div class="input-for-1">
                             <label for="college">College</label>
                             <select name="college" id="college" class="input" required>
+                                <?php $query = mysqli_query($connection, "SELECT * FROM college");
+                                ?>
                                 <option value="">Select College</option>
-                                <!-- php script that will retrieve the college names from the database and add them as an option -->
+                                <?php
+                                if (mysqli_num_rows($query) > 0) {
+                                    while ($row = mysqli_fetch_array($query)) {
+                                        echo "<option value='", $row["college_id"], "'>", $row["college_name"], "</option>";
+                                    }
+                                }
+                                ?>
+
                             </select>
                         </div>
                     </div>
 
                     <!-- courses -->
-                    <div class="input-container" id="course">
+                    <div class="input-div" id="course">
                         <div class="input-for-1">
                             <label for="course">Course</label>
                             <select name="course" id="s" class="input" required>
-                                <!-- <! — If and only if the previous element has value, it will be shown —> -->
+                                <!-- the number of option elements and their values here is dependent on the value of the college select element -->
                             </select>
                         </div>
                     </div>
@@ -180,7 +279,7 @@ if (isset($_POST['delete_event'])) {
                     <div class="title title_event_form-div">
                         <p class="title_event_form">Edit Event</p>
                     </div>
-                    <div class="input-container">
+                    <div class="input-div">
                         <div class="input-for-1">
                             <label for="event_name">Event Name</label>
                             <input type="text" name="event_name" class="input event_name" value="Computer Science Day" placeholder="Type here" required />
@@ -188,13 +287,13 @@ if (isset($_POST['delete_event'])) {
                     </div>
 
                     <!-- <div id="experienceSection"></div> -->
-                    <div class="input-container">
+                    <div class="input-div">
                         <div class="input-for-1">
                             <label for="host">Host name</label>
                             <input type="text" name="host" class="input host" placeholder="Type here" required />
                         </div>
                     </div>
-                    <div class="input-container">
+                    <div class="input-div">
                         <div class="input-for-3">
                             <label for="startDate">Start Date</label>
                             <input type="date" name="startDate" class="input date" placeholder="Type here" required />
@@ -212,7 +311,7 @@ if (isset($_POST['delete_event'])) {
                             </select>
                         </div>
                     </div>
-                    <div class="input-container" id="halfDay">
+                    <div class="input-div" id="halfDay">
                         <div class="input-for-2">
                             <label for="startTime">Start Time</label>
                             <input type="time" name="startTime" class="input" id="startTime" required>
@@ -222,7 +321,7 @@ if (isset($_POST['delete_event'])) {
                             <input type="time" name="endTime" class="input" id="endTime" required>
                         </div>
                     </div>
-                    <div class="input-container" id="wholeDay">
+                    <div class="input-div" id="wholeDay">
                         <div class="input-for-2">
                             <label for="amStartTime">AM Start Time</label>
                             <input type="time" name="amStartTime" class="input" id="amStartTime">
@@ -240,13 +339,13 @@ if (isset($_POST['delete_event'])) {
                             <input type="time" name="amEndTime" class="input" id="amEndTime" required>
                         </div>
                     </div>
-                    <div class="input-container">
+                    <div class="input-div">
                         <div class="input-for-1">
                             <label for="event_desc">Description</label>
                             <input type="text" name="event_desc" class="input event_desc" placeholder="Type here" required />
                         </div>
                     </div>
-                    <div class="input-container">
+                    <div class="input-div">
                         <div class="input-for-1">
                             <label for="fines">Fines</label>
                             <input type="text" name="fines" class="input fines" placeholder="Type here" required />
@@ -312,14 +411,14 @@ if (isset($_POST['delete_event'])) {
                     <div class="input-for-1" id="close"><span class="close">Close</span></div>
                 </div>
                 <form action="" class="delete_event_form" id="delete_event_form" method="post">
-                    <div class="input-container">
+                    <div class="input-div">
                         <p>The event <b>"COMSOC WEEK Opening,"</b> which was previously scheduled, will be deleted. This does imply that you cannot access any information about this event.
                             <br>
                             <br>
                             Please type <b>COMSOC WEEK Opening</b> to confirm
                         </p>
                     </div>
-                    <div class="input-container">
+                    <div class="input-div">
                         <div class="input-for-1">
 
                             <input type="text" name="fines" class="input fines" placeholder="Type here" required />
