@@ -11,6 +11,7 @@
     <body>
 
                 <?php
+                    $_SESSION['page'] = 'Dashboard';
                     include("navbar.php");
                 ?>
 

@@ -14,6 +14,7 @@
 </head>
 
 <?php
+$_SESSION['page'] = 'Accounts';
 include("navbar.php");
 include("php/get_accounts.php");
 ?>

@@ -21,9 +21,9 @@ if (isset($_POST['login'])) {
     }
     else{
         $_SESSION['user'] = $row['account_type'];
+        $_SESSION['org'] = $row['org_id'];
         $_SESSION['id'] = $row['user_id'];
-        header('location: dashboard.php');
-        
+        header('location: dashboard.php'); 
     }
 }
 

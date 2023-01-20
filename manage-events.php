@@ -14,8 +14,9 @@
 </head>
 
 <?php
-include("navbar.php");
-
+  $_SESSION['page'] = 'Events';
+  include("navbar.php");
+  include("php/get_events.php");
 ?>
 
 <div class="content-area">
@@ -38,7 +39,8 @@ include("navbar.php");
     <thead>
       <tr class="row-header">
         <th>Event Name</th>
-        <th>Date</th>
+        <th>From </th>
+        <th>To</th>
         <th>Host</th>
         <th>Status</th>
         <th class="btn-group-sm" style="width: 148px;">
@@ -46,11 +48,29 @@ include("navbar.php");
       </tr>
     </thead>
     <tbody>
+    <?php if (mysqli_num_rows($result) == 0) { ?>
+      <tr class="row-body" style="justify-content: center;">
+        <td colspan='5'>
+          <h2>-- No Records --</h2>
+        </td>
+      </tr>
+    <?php } ?>
+    <?php
+      while ($row = mysqli_fetch_assoc($result)) {
+        $name = $row['event_name'];
+        $from = $row['date_from'];
+        $to = $row['date_to'];
+        $host = $row['host'];
+        $status = $row['status'];
+
+      ?>
+
       <tr class="row-body">
-        <td class="event-name cell">Computer Science Day</td>
-        <td class="date cell">February 15, 2023</td>
-        <td class="host cell">Alan Turing</td>
-        <td class="status cell">Upcoming </td>
+        <td class="event-name cell"><?php echo $name?></td>
+        <td class="date cell"><?php echo $from?></td>
+        <td class="date cell"><?php echo $to?></td>
+        <td class="host cell"><?php echo $host?></td>
+        <td class="status cell"><?php echo $status?></td>
         <td class="btn-group-sm cell cell-long">
           <a class="crud-button view_button" id="read_button" onclick="show_modal('read')"><span class="material-symbols-outlined"> visibility </span></a>
           <a class="crud-button edit_button" id="edit_button" onclick="show_modal('edit')"><span class="material-symbols-outlined">
@@ -61,6 +81,7 @@ include("navbar.php");
             </span></a>
         </td>
       </tr>
+      <?php } ?>
     </tbody>
   </table>
   </main>

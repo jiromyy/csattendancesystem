@@ -3,7 +3,8 @@
 </head>
 <body>
 
-    <?php  
+    <?php
+    $page = $_SESSION['page'];  
     include("php/header.php");
     ?>
 
@@ -35,19 +36,19 @@
                         <span>Accounts</span>
                     </a>
                 </li>
-                <li <?php if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
+                <li <?php if ($user != "org_admin" && $user != "super_admin") echo 'style=display:none'?>>
                     <a href="manage-events.php">
                         <i class="fa-regular fa-note-sticky"></i>
                         <span>Events</span>
                     </a>
                 </li>
-                <li <?php if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
+                <li <?php if ($user != "org_admin" && $user != "super_admin") echo 'style=display:none'?>>
                     <a href="#">
                         <i class="fa-solid fa-users"></i>
                         <span>Attendee</span>
                     </a>
                 </li>
-                <li <?php if ($user != "org_manager" && $user != "super_admin") echo 'style=display:none'?>>
+                <li <?php if ($user != "org_admin" && $user != "super_admin") echo 'style=display:none'?>>
                     <a href="attendance_events.php">
                         <i class="fa-regular fa-flag"></i>
                         <span>Attendance</span>
@@ -57,7 +58,7 @@
         </nav>
         <main class="dashboard">
             <div class="dashboard-header">
-                <span>Dashboard</span>
+                <span><?php echo $page;?></span>
                 <div class="user">
                     <div class="user-profile">
                         <img src="assets/user.jpg" alt="Emman Gwapo">
